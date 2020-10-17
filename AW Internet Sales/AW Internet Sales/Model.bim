@@ -27,6 +27,7 @@
     "tables": [
       {
         "name": "DimDate",
+        "dataCategory": "Time",
         "columns": [
           {
             "name": "DateKey",
@@ -36,6 +37,7 @@
           {
             "name": "Date",
             "dataType": "dateTime",
+            "isKey": true,
             "sourceColumn": "FullDateAlternateKey"
           },
           {
@@ -702,6 +704,50 @@
             }
           }
         ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "8738ec9b-a8f2-4340-9faa-241768d47ad9",
+        "fromTable": "DimCustomer",
+        "fromColumn": "GeographyKey",
+        "toTable": "DimGeography",
+        "toColumn": "GeographyKey"
+      },
+      {
+        "name": "0b6da1c1-6fbb-4daa-9493-35ee670e19f4",
+        "fromTable": "DimProduct",
+        "fromColumn": "ProductSubcategoryKey",
+        "toTable": "DimProductSubcategory",
+        "toColumn": "ProductSubcategoryKey"
+      },
+      {
+        "name": "cf6a9aec-2bed-483f-8c30-0206debc6df5",
+        "fromTable": "DimProductSubcategory",
+        "fromColumn": "ProductCategoryKey",
+        "toTable": "DimProductCategory",
+        "toColumn": "ProductCategoryKey"
+      },
+      {
+        "name": "c966759e-2417-4261-9d95-ff40face124a",
+        "fromTable": "FactInternetSales",
+        "fromColumn": "CustomerKey",
+        "toTable": "DimCustomer",
+        "toColumn": "CustomerKey"
+      },
+      {
+        "name": "ad60ab6c-43c2-4da1-999b-b382350c58fb",
+        "fromTable": "FactInternetSales",
+        "fromColumn": "ProductKey",
+        "toTable": "DimProduct",
+        "toColumn": "ProductKey"
+      },
+      {
+        "name": "480fb76d-5a97-40ea-bbb1-39c4f891fd4b",
+        "fromTable": "FactInternetSales",
+        "fromColumn": "OrderDateKey",
+        "toTable": "DimDate",
+        "toColumn": "Date"
       }
     ],
     "annotations": [
