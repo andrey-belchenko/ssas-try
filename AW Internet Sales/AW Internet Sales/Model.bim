@@ -27,7 +27,6 @@
     "tables": [
       {
         "name": "DimDate",
-        "dataCategory": "Time",
         "columns": [
           {
             "name": "DateKey",
@@ -37,7 +36,6 @@
           {
             "name": "Date",
             "dataType": "dateTime",
-            "isKey": true,
             "sourceColumn": "FullDateAlternateKey"
           },
           {
@@ -104,6 +102,20 @@
             "name": "FiscalSemester",
             "dataType": "int64",
             "sourceColumn": "FiscalSemester"
+          },
+          {
+            "type": "calculated",
+            "name": "MonthCalendar",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "RIGHT(\" \" & FORMAT([MonthNumberOfYear],\"#0\"), 2) & \" - \" & [EnglishMonthName]  "
+          },
+          {
+            "type": "calculated",
+            "name": "DayOfWeek ",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "RIGHT(\" \" & FORMAT([DayNumberOfWeek],\"#0\"), 2) & \" - \" & [EnglishDayNameOfWeek]  "
           }
         ],
         "partitions": [
@@ -470,6 +482,20 @@
             "name": "Status",
             "dataType": "string",
             "sourceColumn": "Status"
+          },
+          {
+            "type": "calculated",
+            "name": "ProductSubcategoryName",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "RELATED('DimProductSubcategory'[EnglishProductSubcategoryName]) "
+          },
+          {
+            "type": "calculated",
+            "name": "ProductCategoryName",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "RELATED('DimProductCategory'[EnglishProductCategoryName]) "
           }
         ],
         "partitions": [
@@ -686,6 +712,20 @@
             "name": "CustomerPONumber",
             "dataType": "string",
             "sourceColumn": "CustomerPONumber"
+          },
+          {
+            "type": "calculated",
+            "name": "Margin",
+            "dataType": "decimal",
+            "isDataTypeInferred": true,
+            "expression": "[SalesAmount]-[TotalProductCost]",
+            "formatString": "#,0.00 \"₽\";-#,0.00 \"₽\";#,0.00 \"₽\"",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1049\" DisplayName=\"₽ Russian (Russia)\" Symbol=\"₽\" PositivePattern=\"3\" NegativePattern=\"8\" /></Format>"
+              }
+            ]
           }
         ],
         "partitions": [
@@ -743,11 +783,11 @@
         "toColumn": "ProductKey"
       },
       {
-        "name": "480fb76d-5a97-40ea-bbb1-39c4f891fd4b",
+        "name": "ada2a116-5704-41a8-9152-cf388ac51acd",
         "fromTable": "FactInternetSales",
         "fromColumn": "OrderDateKey",
         "toTable": "DimDate",
-        "toColumn": "Date"
+        "toColumn": "DateKey"
       }
     ],
     "annotations": [
