@@ -1,0 +1,484 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1500,
+  "model": {
+    "culture": "ru-RU",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "SQL/192 168 0 115;Ilim DataMart",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": "192.168.0.115",
+            "database": "Ilim.DataMart"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {},
+        "credential": {
+          "AuthenticationKind": "UsernamePassword",
+          "Username": "conteq",
+          "EncryptConnection": false
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "data DimTask",
+        "columns": [
+          {
+            "name": "TaskUID",
+            "dataType": "string",
+            "sourceColumn": "TaskUID"
+          },
+          {
+            "name": "TaskName",
+            "dataType": "string",
+            "sourceColumn": "TaskName"
+          },
+          {
+            "name": "TaskWBS",
+            "dataType": "string",
+            "sourceColumn": "TaskWBS"
+          },
+          {
+            "name": "TaskOutlineLevel",
+            "dataType": "int64",
+            "sourceColumn": "TaskOutlineLevel"
+          },
+          {
+            "name": "TaskIndex",
+            "dataType": "int64",
+            "sourceColumn": "TaskIndex"
+          },
+          {
+            "name": "ProjectUID",
+            "dataType": "string",
+            "sourceColumn": "ProjectUID"
+          },
+          {
+            "name": "ParentTaskUID",
+            "dataType": "string",
+            "sourceColumn": "ParentTaskUID"
+          },
+          {
+            "name": "MilestoneId",
+            "dataType": "int64",
+            "sourceColumn": "MilestoneId"
+          },
+          {
+            "name": "TaskPercentCompleted",
+            "dataType": "int64",
+            "sourceColumn": "TaskPercentCompleted"
+          },
+          {
+            "name": "TaskFinishVariance",
+            "dataType": "int64",
+            "sourceColumn": "TaskFinishVariance"
+          },
+          {
+            "name": "TaskStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "TaskStartDate"
+          },
+          {
+            "name": "TaskFinishDate",
+            "dataType": "dateTime",
+            "sourceColumn": "TaskFinishDate"
+          },
+          {
+            "name": "TaskBaselineStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "TaskBaselineStartDate"
+          },
+          {
+            "name": "TaskBaselineFinishDate",
+            "dataType": "dateTime",
+            "sourceColumn": "TaskBaselineFinishDate"
+          },
+          {
+            "name": "TaskActualFinishDate",
+            "dataType": "dateTime",
+            "sourceColumn": "TaskActualFinishDate"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/192 168 0 115;Ilim DataMart\",",
+                "    data_DimTask = Source{[Schema=\"data\",Item=\"DimTask\"]}[Data]",
+                "in",
+                "    data_DimTask"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "data FactEVA",
+        "columns": [
+          {
+            "name": "ProjectUID",
+            "dataType": "string",
+            "sourceColumn": "ProjectUID"
+          },
+          {
+            "name": "TaskUID",
+            "dataType": "string",
+            "sourceColumn": "TaskUID"
+          },
+          {
+            "name": "ResourceUID",
+            "dataType": "string",
+            "sourceColumn": "ResourceUID"
+          },
+          {
+            "name": "AssignmentUID",
+            "dataType": "string",
+            "sourceColumn": "AssignmentUID"
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date"
+          },
+          {
+            "name": "PlanWorkBaselineCost",
+            "dataType": "double",
+            "sourceColumn": "PlanWorkBaselineCost"
+          },
+          {
+            "name": "PlanWork",
+            "dataType": "double",
+            "sourceColumn": "PlanWork"
+          },
+          {
+            "name": "CompletedWorkActualCost",
+            "dataType": "double",
+            "sourceColumn": "CompletedWorkActualCost"
+          },
+          {
+            "name": "CompletedWork",
+            "dataType": "double",
+            "sourceColumn": "CompletedWork"
+          },
+          {
+            "name": "CompletedWorkBaselineCost",
+            "dataType": "double",
+            "sourceColumn": "CompletedWorkBaselineCost"
+          },
+          {
+            "name": "CumulativePlanWorkBaselineCost",
+            "dataType": "double",
+            "sourceColumn": "CumulativePlanWorkBaselineCost"
+          },
+          {
+            "name": "CumulativePlanWork",
+            "dataType": "double",
+            "sourceColumn": "CumulativePlanWork"
+          },
+          {
+            "name": "CumulativeCompletedWorkActualCost",
+            "dataType": "double",
+            "sourceColumn": "CumulativeCompletedWorkActualCost"
+          },
+          {
+            "name": "CumulativeCompletedWork",
+            "dataType": "double",
+            "sourceColumn": "CumulativeCompletedWork"
+          },
+          {
+            "name": "CumulativeCompletedWorkBaselineCost",
+            "dataType": "double",
+            "sourceColumn": "CumulativeCompletedWorkBaselineCost"
+          },
+          {
+            "name": "CumulativeValidToDate",
+            "dataType": "dateTime",
+            "sourceColumn": "CumulativeValidToDate"
+          },
+          {
+            "name": "EstimationWorkActualCost",
+            "dataType": "double",
+            "sourceColumn": "EstimationWorkActualCost"
+          },
+          {
+            "name": "EstimationWork",
+            "dataType": "double",
+            "sourceColumn": "EstimationWork"
+          },
+          {
+            "name": "EstimationWorkBaselineCost",
+            "dataType": "double",
+            "sourceColumn": "EstimationWorkBaselineCost"
+          },
+          {
+            "name": "CumulativeEstimationWorkBaselineCost",
+            "dataType": "double",
+            "sourceColumn": "CumulativeEstimationWorkBaselineCost"
+          },
+          {
+            "name": "CumulativeEstimationWorkActualCost",
+            "dataType": "double",
+            "sourceColumn": "CumulativeEstimationWorkActualCost"
+          },
+          {
+            "name": "FinalBudget",
+            "dataType": "double",
+            "sourceColumn": "FinalBudget"
+          },
+          {
+            "name": "EstimationFinalBudget",
+            "dataType": "double",
+            "sourceColumn": "EstimationFinalBudget"
+          },
+          {
+            "name": "CompletedWorkBaselineCostOld",
+            "dataType": "double",
+            "sourceColumn": "CompletedWorkBaselineCostOld"
+          },
+          {
+            "name": "CumulativeCompletedWorkBaselineCostOld",
+            "dataType": "double",
+            "sourceColumn": "CumulativeCompletedWorkBaselineCostOld"
+          },
+          {
+            "name": "CompletedWorkBaselineCostForecast",
+            "dataType": "double",
+            "sourceColumn": "CompletedWorkBaselineCostForecast"
+          },
+          {
+            "name": "CumulativeCompletedWorkBaselineCostForecast",
+            "dataType": "double",
+            "sourceColumn": "CumulativeCompletedWorkBaselineCostForecast"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/192 168 0 115;Ilim DataMart\",",
+                "    data_FactEVA = Source{[Schema=\"data\",Item=\"FactEVA\"]}[Data]",
+                "in",
+                "    data_FactEVA"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Value1",
+            "expression": "sum('data FactEVA'[CumulativeCompletedWork])"
+          },
+          {
+            "name": "Value2",
+            "expression": "sum('data FactEVA'[CompletedWorkBaselineCost])"
+          }
+        ]
+      },
+      {
+        "name": "data DimProject",
+        "columns": [
+          {
+            "name": "ProjectUID",
+            "dataType": "string",
+            "sourceColumn": "ProjectUID"
+          },
+          {
+            "name": "BusinessUnit",
+            "dataType": "string",
+            "sourceColumn": "BusinessUnit"
+          },
+          {
+            "name": "ProjectCode",
+            "dataType": "string",
+            "sourceColumn": "ProjectCode"
+          },
+          {
+            "name": "ProjectCategory",
+            "dataType": "string",
+            "sourceColumn": "ProjectCategory"
+          },
+          {
+            "name": "ProjectName",
+            "dataType": "string",
+            "sourceColumn": "ProjectName"
+          },
+          {
+            "name": "ProjectCurrency",
+            "dataType": "string",
+            "sourceColumn": "ProjectCurrency"
+          },
+          {
+            "name": "ProjectStartDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ProjectStartDate"
+          },
+          {
+            "name": "ProjectFinishDate",
+            "dataType": "dateTime",
+            "sourceColumn": "ProjectFinishDate"
+          },
+          {
+            "name": "SignAchievementTEP",
+            "dataType": "string",
+            "sourceColumn": "SignAchievementTEP"
+          },
+          {
+            "name": "ApplyEarnedVolumeMethod",
+            "dataType": "boolean",
+            "sourceColumn": "ApplyEarnedVolumeMethod"
+          },
+          {
+            "name": "Milestone1BaselineDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone1BaselineDate"
+          },
+          {
+            "name": "Milestone2BaselineDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone2BaselineDate"
+          },
+          {
+            "name": "Milestone3BaselineDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone3BaselineDate"
+          },
+          {
+            "name": "Milestone4BaselineDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone4BaselineDate"
+          },
+          {
+            "name": "Milestone5BaselineDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone5BaselineDate"
+          },
+          {
+            "name": "Milestone6BaselineDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone6BaselineDate"
+          },
+          {
+            "name": "Milestone1PlanDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone1PlanDate"
+          },
+          {
+            "name": "Milestone2PlanDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone2PlanDate"
+          },
+          {
+            "name": "Milestone3PlanDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone3PlanDate"
+          },
+          {
+            "name": "Milestone4PlanDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone4PlanDate"
+          },
+          {
+            "name": "Milestone5PlanDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone5PlanDate"
+          },
+          {
+            "name": "Milestone6PlanDate",
+            "dataType": "dateTime",
+            "sourceColumn": "Milestone6PlanDate"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/192 168 0 115;Ilim DataMart\",",
+                "    data_DimProject = Source{[Schema=\"data\",Item=\"DimProject\"]}[Data]",
+                "in",
+                "    data_DimProject"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "data DimResource",
+        "columns": [
+          {
+            "name": "ResourceUID",
+            "dataType": "string",
+            "sourceColumn": "ResourceUID"
+          },
+          {
+            "name": "ResourceName",
+            "dataType": "string",
+            "sourceColumn": "ResourceName"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/192 168 0 115;Ilim DataMart\",",
+                "    data_DimResource = Source{[Schema=\"data\",Item=\"DimResource\"]}[Data]",
+                "in",
+                "    data_DimResource"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "06e79095-40a6-4b31-90f4-193fc9132375",
+        "fromTable": "data FactEVA",
+        "fromColumn": "TaskUID",
+        "toTable": "data DimTask",
+        "toColumn": "TaskUID"
+      },
+      {
+        "name": "c0c856cb-d184-47e8-96e8-253701706bb8",
+        "fromTable": "data FactEVA",
+        "fromColumn": "ResourceUID",
+        "toTable": "data DimResource",
+        "toColumn": "ResourceUID"
+      },
+      {
+        "name": "f0af2223-4943-4922-8646-ced87aae64ef",
+        "fromTable": "data DimTask",
+        "fromColumn": "ProjectUID",
+        "toTable": "data DimProject",
+        "toColumn": "ProjectUID"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "600"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

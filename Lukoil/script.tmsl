@@ -1,0 +1,10 @@
+{
+  "refresh": {
+    "type": "automatic",
+    "objects": [
+      {
+        "database": "36dcaf98-eb5a-4af0-8c6f-01b959716e6f"
+      }
+    ]
+  }
+}

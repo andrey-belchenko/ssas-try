@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Multidimensional1", "Multidimensional1\Multidimensional1.dwproj", "{7C2377FC-9358-4031-B274-CCF41E67CAE2}"
+EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "WritebackTest", "WritebackTest\WritebackTest.dwproj", "{CA9F2E1E-D3F1-4714-BDDD-855168C06FBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C2377FC-9358-4031-B274-CCF41E67CAE2}.Development|Default.ActiveCfg = Development
+		{7C2377FC-9358-4031-B274-CCF41E67CAE2}.Development|Default.Build.0 = Development
+		{7C2377FC-9358-4031-B274-CCF41E67CAE2}.Development|Default.Deploy.0 = Development
+		{CA9F2E1E-D3F1-4714-BDDD-855168C06FBC}.Development|Default.ActiveCfg = Development
+		{CA9F2E1E-D3F1-4714-BDDD-855168C06FBC}.Development|Default.Build.0 = Development
+		{CA9F2E1E-D3F1-4714-BDDD-855168C06FBC}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0DB24CF1-E992-4862-A082-498B75A395D0}
+	EndGlobalSection
+EndGlobal

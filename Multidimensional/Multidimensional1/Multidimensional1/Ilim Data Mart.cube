@@ -1,0 +1,651 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="cc356fd2-5d32-4a22-ba28-463b22963b53" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Ilim Data Mart</ID>
+  <Name>Ilim Data Mart</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1206" scrolltop="-3182" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="92" x="12859" y="16907" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Project" left="9723" top="0" logicalid="11" controlid="1" masterid="0" hint1="0" hint2="0" width="4683" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004b12000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="data_DimProject" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Rate" left="10014" top="7400" logicalid="12" controlid="2" masterid="0" hint1="0" hint2="0" width="4101" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e000005100000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="data_DimProjectResource" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Task" left="1555" top="12102" logicalid="13" controlid="3" masterid="0" hint1="0" hint2="0" width="4233" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00008910000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="data_DimTask" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fact" left="20" top="4702" logicalid="14" controlid="4" masterid="0" hint1="0" hint2="0" width="7303" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000871c000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="data_FactEVA" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Resource" left="10477" top="12525" logicalid="15" controlid="5" masterid="0" hint1="0" hint2="0" width="3175" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000670c000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="data_DimResource" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7023" top="2101" logicalid="16" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="4301" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactEVA-DimProject]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="26" destattachpoint="31" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9723" y="2500" />
+              <point x="8523" y="2500" />
+              <point x="8523" y="6102" />
+              <point x="7323" y="6102" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="11665" top="4501" logicalid="17" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_data_DimProject_data_DimProjectResource]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="9" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12064" y="5000" />
+              <point x="12064" y="7400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="11665" top="9825" logicalid="18" controlid="8" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_data_DimResource_data_DimProjectResource]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="2" sourceattachpoint="4" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12064" y="12525" />
+              <point x="12064" y="10125" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3272" top="9402" logicalid="19" controlid="9" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactEVA-DimTask]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="6" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3671" y="12102" />
+              <point x="3671" y="9702" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7023" top="7452" logicalid="20" controlid="10" masterid="0" hint1="0" hint2="0" width="3754" height="6412" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FactEVA-DimResource]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="4" sourceattachpoint="12" destattachpoint="37" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10477" y="13464" />
+              <point x="8900" y="13464" />
+              <point x="8900" y="7752" />
+              <point x="7323" y="7752" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1206</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3182</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>92</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="bbbe477d-8605-4fa9-b1d6-093397fbe999">
+      <ID>Project</ID>
+      <Name>Project</Name>
+      <DimensionID>Project</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b17e663b-20a8-4746-86d1-8c942ad4f549">
+          <AttributeID>Project UID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aa3b4529-3a4d-433d-8628-d8a431832536">
+          <AttributeID>Project Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="811437eb-0b12-41cf-a941-e06149d74c96">
+          <AttributeID>Project Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="347eba73-b3f4-4407-b0e4-10edb0f33881">
+          <AttributeID>Project Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="15139f78-f7ee-4dfc-aff8-0203402ad8fe">
+          <AttributeID>Project Currency</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8ddbff61-d73a-48d1-b889-503bd729c3ae">
+          <AttributeID>Apply Earned Volume Method</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="0cffc443-0102-46ff-961f-2afefe4af63d">
+      <ID>Task</ID>
+      <Name>Task</Name>
+      <DimensionID>Task</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="306c77bd-7aca-47ac-9f09-975c5b182b44">
+          <AttributeID>Task UID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1b6ffe88-61e7-4ec9-b716-4170ab150513">
+          <AttributeID>Task Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="efc668d1-e7ff-4d41-925a-d5da14e7fdbe">
+          <AttributeID>Parent Task UID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="054b1b3b-5a29-4d82-b3aa-a3b71a9f7e90">
+          <AttributeID>Milestone Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="16e26b1b-f1cb-4903-8be1-16361865a5fe">
+      <ID>Resource</ID>
+      <Name>Resource</Name>
+      <DimensionID>Resource</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9d1a0906-1ae7-411d-bf29-cbe0d9972f39">
+          <AttributeID>Resource UID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="24ef99d6-59f8-49e7-a5b4-b47b51f095ca">
+          <AttributeID>Resource Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="76fe14e9-aaf5-49f2-b4f1-54d4d304cce4">
+      <ID>Fact</ID>
+      <Name>Fact</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="bb053443-3604-424a-9c8b-6ff6b1f36363">
+          <ID>Plan Work Baseline Cost</ID>
+          <Name>Plan Work Baseline Cost</Name>
+          <Source dwd:design-time-name="d40da727-1087-4b52-b134-00c2c3c5bd47">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d704359e-cdf4-45fc-b332-4466824dff7d">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>PlanWorkBaselineCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4d1a74e8-d635-4e84-891a-93aa89aefe0c">
+          <ID>Plan Work</ID>
+          <Name>Plan Work</Name>
+          <Source dwd:design-time-name="beb95e21-cfb7-4f09-97fe-aa1ef3cae441">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e1e3c8bd-b598-4791-acc9-e425e38e3436">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>PlanWork</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="40a8844c-6ccd-4991-bde8-7ce5ca475637">
+          <ID>Completed Work Actual Cost</ID>
+          <Name>Completed Work Actual Cost</Name>
+          <Source dwd:design-time-name="23a0e134-1cfc-4b1c-a6ed-ab9e76b8f38a">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1681d9a9-6f5c-481c-a3a4-2e48d40bfe0d">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CompletedWorkActualCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="acc04d3c-808a-495b-8fa8-d217c518ae1e">
+          <ID>Completed Work</ID>
+          <Name>Completed Work</Name>
+          <Source dwd:design-time-name="7b5faaf4-621e-4070-8533-6ba677077617">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f4d76c4c-3580-47c4-bf3b-ab603bab9ad8">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CompletedWork</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1376e6ad-0fd2-48b6-abe3-14abb6cc9273">
+          <ID>Completed Work Baseline Cost</ID>
+          <Name>Completed Work Baseline Cost</Name>
+          <Source dwd:design-time-name="0970425e-5e2b-4922-8c1a-fca1bc87c17e">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f8b59355-c4fc-45e2-abb4-ece9710db81f">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CompletedWorkBaselineCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f52d228b-5c5b-4c73-a6c4-3a7577c535e7">
+          <ID>Cumulative Plan Work Baseline Cost</ID>
+          <Name>Cumulative Plan Work Baseline Cost</Name>
+          <Source dwd:design-time-name="b2119a52-0b0e-4e9b-83c5-663cff4ba1d5">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="70c3cb55-b0a1-4d9e-9942-fe301070ebe8">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CumulativePlanWorkBaselineCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5a86797e-83b8-4b09-a234-b8616cf62dea">
+          <ID>Cumulative Plan Work</ID>
+          <Name>Cumulative Plan Work</Name>
+          <Source dwd:design-time-name="194e5ca0-390c-4c5f-8eb1-09ff8e3c4239">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0e160352-a0b8-489b-a48e-d66adeb3adfe">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CumulativePlanWork</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8824d6d1-338e-4f53-95e4-c6c1f2a755df">
+          <ID>Cumulative Completed Work Actual Cost</ID>
+          <Name>Cumulative Completed Work Actual Cost</Name>
+          <Source dwd:design-time-name="3e839fa8-762d-4a8f-af0a-ebd835391502">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a5cb5df9-3360-4cfd-89b2-4394b85b02e5">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CumulativeCompletedWorkActualCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="eba960c6-a492-4b05-a5b5-0041a82efe0f">
+          <ID>Cumulative Completed Work</ID>
+          <Name>Cumulative Completed Work</Name>
+          <Source dwd:design-time-name="7d3bb89c-15b3-4d17-8d5d-24ea19c5c956">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3cdf7aec-f2b0-4bbc-abf8-97309128cfae">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CumulativeCompletedWork</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f46e7ae0-e65a-47f1-ab62-a96627e5977f">
+          <ID>Cumulative Completed Work Baseline Cost</ID>
+          <Name>Cumulative Completed Work Baseline Cost</Name>
+          <Source dwd:design-time-name="d374f075-5aaa-4f3f-8fa5-595d5ca583ce">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="828064e3-b257-4d9b-b88e-e49a94cce79c">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CumulativeCompletedWorkBaselineCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="21f4c623-70cb-4843-b2de-a7ec5c9cfe36">
+          <ID>Estimation Work Actual Cost</ID>
+          <Name>Estimation Work Actual Cost</Name>
+          <Source dwd:design-time-name="63b65072-5c4a-4fd8-8f1e-ee78263e72dc">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6596b339-4642-4d30-ae5e-75b2663b8696">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>EstimationWorkActualCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3e50798a-12b3-4ed6-9773-937beacc32c3">
+          <ID>Estimation Work</ID>
+          <Name>Estimation Work</Name>
+          <Source dwd:design-time-name="e68197ac-6ab4-4d36-bfec-f7e0c3f4ab3c">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d8267bd8-6419-4989-8781-fb3ee2cc1df6">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>EstimationWork</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bdc7f7b6-ba06-479e-99c6-60e71493902a">
+          <ID>Estimation Work Baseline Cost</ID>
+          <Name>Estimation Work Baseline Cost</Name>
+          <Source dwd:design-time-name="5742369c-1046-45c3-9eae-ffe3cc5a9e01">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="df271404-7634-492e-b6b0-57aab5f4d92a">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>EstimationWorkBaselineCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="92b582c8-6349-480c-be64-778f4016cdb6">
+          <ID>Cumulative Estimation Work Baseline Cost</ID>
+          <Name>Cumulative Estimation Work Baseline Cost</Name>
+          <Source dwd:design-time-name="92b06c9f-756d-4523-a214-71df1b950e25">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7b4b67a9-1bcb-4e34-ade6-7963de0ff8f9">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CumulativeEstimationWorkBaselineCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5cf51978-6b88-4f74-bb88-d4e45ae6416c">
+          <ID>Cumulative Estimation Work Actual Cost</ID>
+          <Name>Cumulative Estimation Work Actual Cost</Name>
+          <Source dwd:design-time-name="b2de2adc-5655-407d-a23b-efaed1e10708">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5c431053-28b7-4287-ab4b-742703306f22">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CumulativeEstimationWorkActualCost</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="9dd8deb5-c8ed-43cd-8fa4-01cf3247df5c">
+          <ID>Final Budget</ID>
+          <Name>Final Budget</Name>
+          <Source dwd:design-time-name="8f0eb56e-2cbf-4a59-9815-39a682ed9cfa">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="599ddc92-0ed3-4073-81b5-7e4412f5d4d2">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>FinalBudget</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4e296861-1a3c-44bf-a599-525e2b5ad877">
+          <ID>Estimation Final Budget</ID>
+          <Name>Estimation Final Budget</Name>
+          <Source dwd:design-time-name="e73e6e2e-432d-4e73-975c-a6d850182593">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d05ac35e-88e0-4978-ad2f-05b8eae69ebf">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>EstimationFinalBudget</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="50da9faa-a0f7-479a-8a9c-fc3a3b4fead5">
+          <ID>Completed Work Baseline Cost Old</ID>
+          <Name>Completed Work Baseline Cost Old</Name>
+          <Source dwd:design-time-name="81ae58db-bebc-4322-ab7b-ee9492246fc3">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6baad202-558d-43d7-9a39-5cab332c3022">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CompletedWorkBaselineCostOld</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="77abaf11-517f-47de-8861-c6cc3523d91f">
+          <ID>Cumulative Completed Work Baseline Cost Old</ID>
+          <Name>Cumulative Completed Work Baseline Cost Old</Name>
+          <Source dwd:design-time-name="aaddfe7c-5fe8-4026-9309-5bd8b3d96605">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="78cc8030-852e-446c-b6ca-d176f02a199b">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CumulativeCompletedWorkBaselineCostOld</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="92eafc6c-86d5-454e-8664-5f8f059a4be7">
+          <ID>Completed Work Baseline Cost Forecast</ID>
+          <Name>Completed Work Baseline Cost Forecast</Name>
+          <Source dwd:design-time-name="1c5f8c9c-c18c-43b0-a785-74e7e081684b">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d6c6e612-94aa-4fa1-9700-16f1e4a4339e">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CompletedWorkBaselineCostForecast</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3c5958a9-06ed-4edd-a5d3-e13ab88c91c2">
+          <ID>Cumulative Completed Work Baseline Cost Forecast</ID>
+          <Name>Cumulative Completed Work Baseline Cost Forecast</Name>
+          <Source dwd:design-time-name="53f4307e-1a9b-4086-892c-05775ebfe2ca">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e2fff7d2-8881-47f1-b1cc-de46912ad8e1">
+              <TableID>data_FactEVA</TableID>
+              <ColumnID>CumulativeCompletedWorkBaselineCostForecast</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e5317f56-bfaa-44ad-b003-884678f39232">
+          <CubeDimensionID>Project</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7bbd7fc9-0236-4d90-a890-1717225ee26d">
+              <AttributeID>Project UID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d5c5f5f4-9d32-440d-a0df-30b5d4d37164">
+                  <DataType>WChar</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fcf53e3a-2f7e-40ec-9a00-dd814a500c90">
+                    <TableID>data_FactEVA</TableID>
+                    <ColumnID>ProjectUID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="996c51a8-63c7-4826-b899-61b3248f18fe">
+          <CubeDimensionID>Task</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="870623fb-3e3f-442c-b13d-bcf5623605bb">
+              <AttributeID>Task UID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="335c72da-2deb-44f6-afe4-9cda56d271f2">
+                  <DataType>WChar</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="885c54a7-b3d0-490e-a0ec-44290558eb0e">
+                    <TableID>data_FactEVA</TableID>
+                    <ColumnID>TaskUID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="30db6e0e-38bb-40dd-a1d5-f6bbf1473007">
+          <CubeDimensionID>Resource</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="05a1a726-3c54-443e-ada9-877316b90f34">
+              <AttributeID>Resource UID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="cb5e1909-1941-47c0-b978-f380f069b5ea">
+                  <DataType>WChar</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="364cdd71-f8fc-4cc7-8405-8f53bc0419d4">
+                    <TableID>data_FactEVA</TableID>
+                    <ColumnID>ResourceUID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="1d551df9-2693-44a5-a0ba-0042ed2c4a99">
+      <ID>Rate</ID>
+      <Name>Rate</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="d5979060-51ba-4b28-bd39-054264ab8fd5">
+          <ID>Resource Rate</ID>
+          <Name>Resource Rate</Name>
+          <Source dwd:design-time-name="447482c1-7669-4ea3-bafc-628b5a4e502e">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6cd29f29-1176-4bd1-93ce-e0b9a32050da">
+              <TableID>data_DimProjectResource</TableID>
+              <ColumnID>ResourceRate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3ca6cc55-5bcc-47e7-b542-380893873414">
+          <ID>Resource Baseline Rate</ID>
+          <Name>Resource Baseline Rate</Name>
+          <Source dwd:design-time-name="5d093267-ea0a-42bc-b079-d52ad9aae763">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9efa856d-03a7-455d-9128-1f3ad5a72e96">
+              <TableID>data_DimProjectResource</TableID>
+              <ColumnID>ResourceBaselineRate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="72af5d79-8ffc-494f-bdd4-f778069622d6">
+          <CubeDimensionID>Project</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d9e504f3-8199-470f-be6c-1e5669545271">
+              <AttributeID>Project UID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8295a7ea-38b5-426a-b0e1-995a4e9c20cf">
+                  <DataType>WChar</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="eef5309b-7b4b-4a94-a8dc-da610e4d2bad">
+                    <TableID>data_DimProjectResource</TableID>
+                    <ColumnID>ProjectUID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e50497ae-8e8c-4009-b78a-013f4f94db0c">
+          <CubeDimensionID>Resource</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5a51db76-f1e0-461f-8f40-eb801fb4ccd8">
+              <AttributeID>Resource UID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="603ac5b9-3034-429e-85fd-b3ac3c664855">
+                  <DataType>WChar</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="382523fe-b7e6-4d3c-870f-5615d122b885">
+                    <TableID>data_DimProjectResource</TableID>
+                    <ColumnID>ResourceUID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="a4069aec-bc85-4fd0-b605-c4bb767e1d02">
+    <DataSourceViewID>Ilim Data Mart</DataSourceViewID>
+  </Source>
+</Cube>

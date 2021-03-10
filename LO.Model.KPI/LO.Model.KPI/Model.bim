@@ -1,0 +1,3308 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1500,
+  "model": {
+    "culture": "ru-RU",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "SQL/192 168 0 115,1436;LO DataMart KPI",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": "192.168.0.115,1436",
+            "database": "LO.DataMart.KPI"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "credential": {
+          "AuthenticationKind": "UsernamePassword",
+          "kind": "SQL",
+          "path": "192.168.0.115,1436;LO.DataMart.KPI",
+          "Username": "conteq",
+          "EncryptConnection": false
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "data Справочник структура ТМ",
+        "columns": [
+          {
+            "name": "Действительно ПО",
+            "dataType": "dateTime",
+            "sourceColumn": "Действительно ПО",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeGeneralPattern\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"d MMMM yyyy 'г.'\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Действительно ПО"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Действительно С",
+            "dataType": "dateTime",
+            "sourceColumn": "Действительно С",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeGeneralPattern\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"d MMMM yyyy 'г.'\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Действительно С"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Дата изменения",
+            "dataType": "dateTime",
+            "sourceColumn": "Дата изменения",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeGeneralPattern\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"d MMMM yyyy 'г.'\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Дата изменения"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Класс ЕО",
+            "dataType": "string",
+            "sourceColumn": "Класс ЕО",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Класс ЕО"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Техническое Место",
+            "dataType": "string",
+            "sourceColumn": "Техническое Место",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Техническое Место"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Блок",
+            "dataType": "string",
+            "sourceColumn": "Блок",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Блок"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Установка",
+            "dataType": "string",
+            "sourceColumn": "Установка",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Установка"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Производство",
+            "dataType": "string",
+            "sourceColumn": "Производство",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Производство"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Завод",
+            "dataType": "string",
+            "sourceColumn": "Завод",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Завод"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Единица оборудования",
+            "dataType": "string",
+            "sourceColumn": "Единица оборудования",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Единица оборудования"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Название установки",
+            "dataType": "string",
+            "sourceColumn": "Название установки",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Название установки"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "data Справочник структура ТМ-48e737b4-5b5b-4ac1-8851-fffb1652470c",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                " ",
+                "    LO.DataMart.KPI =  #\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
+                "    #\"data_Справочник структура ТМ\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Справочник структура ТМ\"]}[Data],",
+                "    #\"Строки с примененным фильтром\" = ",
+                "        Table.SelectRows(#\"data_Справочник структура ТМ\", each ",
+                "            [Завод] = \"NN\" or ",
+                "            [Завод] = \"PN\" or ",
+                "            [Завод] = \"VN\" or",
+                "            [Завод] = \"ST\" or",
+                "            [Завод] = \"SO\" or",
+                "            [Завод] = \"UP\" or",
+                "            [Завод] = \"PT\" or",
+                "            [Завод] = \"BG\"",
+                "            )",
+                "in",
+                "    #\"Строки с примененным фильтром\""
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Exception"
+          },
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          }
+        ]
+      },
+      {
+        "name": "data Сумма заказа",
+        "columns": [
+          {
+            "name": "Вариант ФинансГода",
+            "dataType": "string",
+            "sourceColumn": "Вариант ФинансГода",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Вариант ФинансГода"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "ФГ/период",
+            "dataType": "string",
+            "sourceColumn": "ФГ/период",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "ФГ/период"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Заказ",
+            "dataType": "string",
+            "sourceColumn": "Заказ",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Заказ"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Тип значения",
+            "dataType": "string",
+            "sourceColumn": "Тип значения",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Тип значения"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Сумма заказа",
+            "dataType": "double",
+            "sourceColumn": "Сумма заказа",
+            "formatString": "0.0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberDecimal\" Accuracy=\"1\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Double#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Сумма заказа"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Тип валюты",
+            "dataType": "string",
+            "sourceColumn": "Тип валюты",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Тип валюты"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "БазисСрокКонца",
+            "dataType": "dateTime",
+            "isDataTypeInferred": true,
+            "expression": "RELATED('data Заказ'[БазисСрокКонца])",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeCustom\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"ShortDate\" FormatString=\"yyyy-MM-dd\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Год",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "YEAR([БазисСрокКонца])",
+            "formatString": "0",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "data Сумма заказа-58401320-b34d-46f1-a950-40824448587f",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    LO.DataMart.KPI = #\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
+                "    #\"data_Сумма заказа\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Сумма заказа\"]}[Data]",
+                "in",
+                "    #\"data_Сумма заказа\""
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Exception"
+          },
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          }
+        ]
+      },
+      {
+        "name": "Calendar",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeCustom\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"ShortDate\" FormatString=\"dd.MM.yyyy\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Год",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calendar-17db1fb1-55d3-4958-b48d-a2f7bbc608f3",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "CALENDAR(MIN('data Заказ'[БазисСрокКонца]), MAX('data Заказ'[БазисСрокКонца]))"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "0a85ba74defd4e3986ace1cefbbc34d6"
+          }
+        ]
+      },
+      {
+        "name": "Measure",
+        "columns": [
+          {
+            "name": "Столбец1",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Столбец1",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Столбец1"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Measure-87e138c2-f501-4d4a-836f-0bf578fcaa53",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Источник = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Столбец1 = _t]),",
+                "    #\"Измененный тип\" = Table.TransformColumnTypes(Источник,{{\"Столбец1\", type text}})",
+                "in",
+                "    #\"Измененный тип\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Ратио План / Факт",
+            "expression": [
+              "",
+              "var p1 = DIVIDE([Общие затраты Факт],[Общие затраты План])",
+              "var p2 =",
+              "    IF(",
+              "        p1 = -0,",
+              "        p1 * -1,",
+              "        p1)",
+              "return p2"
+            ],
+            "formatString": "#,0.00%;-#,0.00%;#,0.00%"
+          },
+          {
+            "name": "Общие затраты План",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    SUM('data Сумма заказа'[Сумма заказа]),",
+              "    'data Сумма заказа'[Тип значения] = \"20\"",
+              ")"
+            ],
+            "formatString": "#,0.00"
+          },
+          {
+            "name": "Общие затраты Факт",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    SUM('data Сумма заказа'[Сумма заказа]),",
+              "    'data Сумма заказа'[Тип значения] = \"10\"",
+              ")"
+            ],
+            "formatString": "#,0.00"
+          },
+          {
+            "name": "Ратио План / Факт -100%",
+            "expression": [
+              "",
+              "var p1 = ",
+              "    IF(",
+              "        [Общие затраты План] = BLANK(),",
+              "        BLANK(),",
+              "        [Ратио План / Факт] -1",
+              "    )",
+              "var p2 = ",
+              "    IF(",
+              "        p1 < 0,",
+              "        0,",
+              "        p1)",
+              "",
+              "return p2"
+            ],
+            "formatString": "#,0.00%;-#,0.00%;#,0.00%"
+          },
+          {
+            "name": "Кол-во единиц оборудования в ЕО",
+            "expression": "DISTINCTCOUNT('data Единица оборудования'[Единица оборудования])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Кол-во единиц оборудования в Заказ",
+            "expression": "DISTINCTCOUNT('data Заказ'[Единица оборудования])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Кол-во единиц оборудования в Структура ТМ",
+            "expression": "DISTINCTCOUNT('data Справочник структура ТМ'[Единица оборудования])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Кол-во уникальных заказов в Заказ",
+            "expression": "DISTINCTCOUNT('data Заказ'[Заказ])",
+            "formatString": "0"
+          },
+          {
+            "name": "Кол-во уникальных заказов в Сумма заказа",
+            "expression": "DISTINCTCOUNT('data Сумма заказа'[Заказ])",
+            "formatString": "0"
+          },
+          {
+            "name": "bbb",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    SUM('data Сумма заказа'[Сумма заказа]),",
+              "    'data Сумма заказа'[Тип значения] = \"20\"",
+              ")"
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "data Заказ",
+        "columns": [
+          {
+            "name": "Вид заказа",
+            "dataType": "string",
+            "sourceColumn": "Вид заказа",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Вид заказа"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Заказ",
+            "dataType": "string",
+            "sourceColumn": "Заказ",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Заказ"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Единица оборудования",
+            "dataType": "string",
+            "sourceColumn": "Единица оборудования",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Единица оборудования"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Дата создания",
+            "dataType": "dateTime",
+            "sourceColumn": "Дата создания",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeGeneralPattern\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"d MMMM yyyy 'г.'\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Дата создания"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "БазисСрокКонца",
+            "dataType": "dateTime",
+            "sourceColumn": "БазисСрокКонца",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeGeneralPattern\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"d MMMM yyyy 'г.'\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "БазисСрокКонца"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "БазисСрокНачала",
+            "dataType": "dateTime",
+            "sourceColumn": "БазисСрокНачала",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeGeneralPattern\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"d MMMM yyyy 'г.'\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "БазисСрокНачала"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Вид работы ТОРО",
+            "dataType": "string",
+            "sourceColumn": "Вид работы ТОРО",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Вид работы ТОРО"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Группа плановиков",
+            "dataType": "string",
+            "sourceColumn": "Группа плановиков",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Группа плановиков"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Техническое Место",
+            "dataType": "string",
+            "sourceColumn": "Техническое Место",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Техническое Место"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Рабочее место",
+            "dataType": "string",
+            "sourceColumn": "Рабочее место",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Рабочее место"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Критичность отказа оборудования",
+            "dataType": "string",
+            "sourceColumn": "Критичность отказа оборудования",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Критичность отказа оборудования"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Номер сообщения",
+            "dataType": "string",
+            "sourceColumn": "Номер сообщения",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Номер сообщения"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Системный статус",
+            "dataType": "string",
+            "sourceColumn": "Системный статус",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Системный статус"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Балансовая единица",
+            "dataType": "string",
+            "sourceColumn": "Балансовая единица",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Балансовая единица"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "data Заказ-e2efbacd-e2c1-4618-bd38-a7ef88e0a726",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "  ",
+                "    LO.DataMart.KPI =#\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
+                "    data_Заказ = LO.DataMart.KPI{[Schema=\"data\",Item=\"Заказ\"]}[Data]",
+                "in",
+                "    data_Заказ"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Exception"
+          },
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          }
+        ]
+      },
+      {
+        "name": "data Единица оборудования",
+        "columns": [
+          {
+            "name": "Единица оборудования",
+            "dataType": "string",
+            "sourceColumn": "Единица оборудования",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Единица оборудования"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Действительно ПО",
+            "dataType": "dateTime",
+            "sourceColumn": "Действительно ПО",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeGeneralPattern\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"d MMMM yyyy 'г.'\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Действительно ПО"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Действительно С",
+            "dataType": "dateTime",
+            "sourceColumn": "Действительно С",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeGeneralPattern\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"d MMMM yyyy 'г.'\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Действительно С"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Вид объекта",
+            "dataType": "string",
+            "sourceColumn": "Вид объекта",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Вид объекта"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Группа плановиков ЕО",
+            "dataType": "string",
+            "sourceColumn": "Группа плановиков ЕО",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Группа плановиков ЕО"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Критичность отказа оборудования",
+            "dataType": "string",
+            "sourceColumn": "Критичность отказа оборудования",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Критичность отказа оборудования"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Техническое Место",
+            "dataType": "string",
+            "sourceColumn": "Техническое Место",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Техническое Место"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Балансовая единица",
+            "dataType": "string",
+            "sourceColumn": "Балансовая единица",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Балансовая единица"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Дата Вводв в  Экспл",
+            "dataType": "dateTime",
+            "sourceColumn": "Дата Вводв в  Экспл",
+            "formatString": "dddd\\, mmmm d\\, yyyy",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeGeneralPattern\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"LongDate\" FormatString=\"d MMMM yyyy 'г.'\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Дата Вводв в  Экспл"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Тип оборудования",
+            "dataType": "string",
+            "sourceColumn": "Тип оборудования",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Тип оборудования"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          },
+          {
+            "name": "Ремонт по тех. Сост",
+            "dataType": "string",
+            "sourceColumn": "Ремонт по тех. Сост",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Ремонт по тех. Сост"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "data Единица оборудования-686e23de-2763-4fc7-a7d9-c14d6f2b4f1b",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                " ",
+                "    LO.DataMart.KPI =#\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
+                "    #\"data_Единица оборудования\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Единица оборудования\"]}[Data]",
+                "in",
+                "    #\"data_Единица оборудования\""
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_DescriptionAtRefresh"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "46785dac-f81e-4499-b606-8a0d3ac56473",
+        "fromTable": "data Сумма заказа",
+        "fromColumn": "Заказ",
+        "toTable": "data Заказ",
+        "toColumn": "Заказ"
+      },
+      {
+        "name": "250444fa-2112-4b71-8bb4-3d3f75076b03",
+        "fromTable": "data Заказ",
+        "fromColumn": "Единица оборудования",
+        "toTable": "data Справочник структура ТМ",
+        "toColumn": "Единица оборудования"
+      },
+      {
+        "name": "bebde7de-b295-48ef-bd00-4c4974cf4d8a",
+        "fromTable": "data Заказ",
+        "fromColumn": "БазисСрокКонца",
+        "toTable": "Calendar",
+        "toColumn": "Date"
+      }
+    ],
+    "cultures": [
+      {
+        "name": "ru-RU",
+        "linguisticMetadata": {
+          "content": {
+            "Version": "2.0.0",
+            "Language": "en-US",
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "data_справочник_структура_ТМ": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Справочник структура ТМ"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "data справочник структура ТМ": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "information справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "fact справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "info справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "statistic справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "document справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "figure справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "record справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.599
+                    }
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ.действительно_ПО": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualProperty": "Действительно ПО"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "действительно ПО": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "data_справочник_структура_ТМ.действительно_с": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualProperty": "Действительно С"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "действительно с": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "data_справочник_структура_ТМ.дата_изменения": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualProperty": "Дата изменения"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "дата изменения": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "data_справочник_структура_ТМ.класс_ЕО": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualProperty": "Класс ЕО"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "класс ЕО": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ.техническое_место": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualProperty": "Техническое Место"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "техническое место": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ.блок": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualProperty": "Блок"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "блок": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ.установка": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualProperty": "Установка"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "установка": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Название установки": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ.производство": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualProperty": "Производство"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "производство": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ.завод": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualProperty": "Завод"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "завод": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "data_сумма_заказа": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Сумма заказа"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "data сумма заказа": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "information сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "fact сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "info сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "statistic сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "document сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "figure сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "record сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.591
+                    }
+                  }
+                ]
+              },
+              "data_сумма_заказа.вариант_ФинансГода": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualProperty": "Вариант ФинансГода"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "вариант ФинансГода": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "data_сумма_заказа.ФГ_период": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualProperty": "ФГ/период"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ФГ/период": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ФГ": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "ФГ период": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "период": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "data_сумма_заказа.заказ": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualProperty": "Заказ"
+                  }
+                },
+                "State": "Generated",
+                "Hidden": true,
+                "Terms": [
+                  {
+                    "заказ": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "data_сумма_заказа.тип_значения": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualProperty": "Тип значения"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "тип значения": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "data_сумма_заказа.сумма_заказа": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualProperty": "Сумма заказа"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "сумма заказа": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "data_сумма_заказа.тип_валюты": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualProperty": "Тип валюты"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "тип валюты": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "calendar": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calendar"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "calendar": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "almanac": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "datebook": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "agenda": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "logbook": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "diary": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "schedule": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "timetable": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "calendar.date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calendar",
+                    "ConceptualProperty": "Date"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "period": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.714
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "measure": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "measure": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "degree": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "quota": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "extent": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "portion": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "ration": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "size": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "measure.столбец_1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure",
+                    "ConceptualProperty": "Столбец1"
+                  }
+                },
+                "State": "Generated",
+                "Hidden": true,
+                "Terms": [
+                  {
+                    "столбец 1": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Столбец1": {
+                      "Type": "Noun",
+                      "State": "Generated",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "measure.ратио_план___факт": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure",
+                    "ConceptualProperty": "Ратио План / Факт"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ратио план / факт": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ратио план": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "ратио план факт": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "факт": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "measure.общие_затраты_план": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure",
+                    "ConceptualProperty": "Общие затраты План"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "общие затраты план": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "measure.общие_затраты_факт": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure",
+                    "ConceptualProperty": "Общие затраты Факт"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "общие затраты факт": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "measure.ратио_план___факт_100": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure",
+                    "ConceptualProperty": "Ратио План / Факт -100%"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ратио план / факт -100%": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ратио план": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "ратио план факт - 100 %": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "факт -100%": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "факт -100 percentage": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.771
+                    }
+                  },
+                  {
+                    "факт -100 pct": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.748
+                    }
+                  },
+                  {
+                    "Превышение плана": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Relationships": {
+              "data_справочник_структура_ТМ_has_еденица_оборудования": {
+                "Binding": {
+                  "ConceptualEntity": "data Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ"
+                    }
+                  },
+                  "data_справочник_структура_ТМ.еденица_оборудования": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ.еденица_оборудования"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "data_справочник_структура_ТМ.еденица_оборудования"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ_has_действительно_ПО": {
+                "Binding": {
+                  "ConceptualEntity": "data Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ"
+                    }
+                  },
+                  "data_справочник_структура_ТМ.действительно_ПО": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ.действительно_ПО"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "data_справочник_структура_ТМ.действительно_ПО"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ_has_действительно_с": {
+                "Binding": {
+                  "ConceptualEntity": "data Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ"
+                    }
+                  },
+                  "data_справочник_структура_ТМ.действительно_с": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ.действительно_с"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "data_справочник_структура_ТМ.действительно_с"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ_has_дата_изменения": {
+                "Binding": {
+                  "ConceptualEntity": "data Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ"
+                    }
+                  },
+                  "data_справочник_структура_ТМ.дата_изменения": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ.дата_изменения"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "data_справочник_структура_ТМ.дата_изменения"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ_has_класс_ЕО": {
+                "Binding": {
+                  "ConceptualEntity": "data Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ"
+                    }
+                  },
+                  "data_справочник_структура_ТМ.класс_ЕО": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ.класс_ЕО"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "data_справочник_структура_ТМ.класс_ЕО"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ_has_техническое_место": {
+                "Binding": {
+                  "ConceptualEntity": "data Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ"
+                    }
+                  },
+                  "data_справочник_структура_ТМ.техническое_место": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ.техническое_место"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "data_справочник_структура_ТМ.техническое_место"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ_has_блок": {
+                "Binding": {
+                  "ConceptualEntity": "data Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ"
+                    }
+                  },
+                  "data_справочник_структура_ТМ.блок": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ.блок"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "data_справочник_структура_ТМ.блок"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ_has_установка": {
+                "Binding": {
+                  "ConceptualEntity": "data Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ"
+                    }
+                  },
+                  "data_справочник_структура_ТМ.установка": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ.установка"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "data_справочник_структура_ТМ.установка"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ_has_производство": {
+                "Binding": {
+                  "ConceptualEntity": "data Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ"
+                    }
+                  },
+                  "data_справочник_структура_ТМ.производство": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ.производство"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "data_справочник_структура_ТМ.производство"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_справочник_структура_ТМ_has_завод": {
+                "Binding": {
+                  "ConceptualEntity": "data Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ"
+                    }
+                  },
+                  "data_справочник_структура_ТМ.завод": {
+                    "Target": {
+                      "Entity": "data_справочник_структура_ТМ.завод"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "data_справочник_структура_ТМ.завод"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_сумма_заказа_has_вариант_ФинансГода": {
+                "Binding": {
+                  "ConceptualEntity": "data Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа"
+                    }
+                  },
+                  "data_сумма_заказа.вариант_ФинансГода": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа.вариант_ФинансГода"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "data_сумма_заказа.вариант_ФинансГода"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_сумма_заказа_has_ФГ_период": {
+                "Binding": {
+                  "ConceptualEntity": "data Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа"
+                    }
+                  },
+                  "data_сумма_заказа.ФГ_период": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа.ФГ_период"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "data_сумма_заказа.ФГ_период"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_сумма_заказа_has_тип_значения": {
+                "Binding": {
+                  "ConceptualEntity": "data Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа"
+                    }
+                  },
+                  "data_сумма_заказа.тип_значения": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа.тип_значения"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "data_сумма_заказа.тип_значения"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_сумма_заказа_has_сумма_заказа": {
+                "Binding": {
+                  "ConceptualEntity": "data Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа"
+                    }
+                  },
+                  "data_сумма_заказа.сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа.сумма_заказа"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "data_сумма_заказа.сумма_заказа"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_сумма_заказа_has_тип_валюты": {
+                "Binding": {
+                  "ConceptualEntity": "data Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа"
+                    }
+                  },
+                  "data_сумма_заказа.тип_валюты": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа.тип_валюты"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "data_сумма_заказа.тип_валюты"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_сумма_заказа_has_plan_1": {
+                "Binding": {
+                  "ConceptualEntity": "data Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа"
+                    }
+                  },
+                  "data_сумма_заказа.plan_1": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа.plan_1"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "data_сумма_заказа.plan_1"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_сумма_заказа_has_f": {
+                "Binding": {
+                  "ConceptualEntity": "data Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа"
+                    }
+                  },
+                  "data_сумма_заказа.f": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа.f"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "data_сумма_заказа.f"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "calendar_has_date": {
+                "Binding": {
+                  "ConceptualEntity": "Calendar"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "calendar": {
+                    "Target": {
+                      "Entity": "calendar"
+                    }
+                  },
+                  "calendar.date": {
+                    "Target": {
+                      "Entity": "calendar.date"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "calendar"
+                      },
+                      "Object": {
+                        "Role": "calendar.date"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "measure_has_plan": {
+                "Binding": {
+                  "ConceptualEntity": "Measure"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "measure": {
+                    "Target": {
+                      "Entity": "measure"
+                    }
+                  },
+                  "measure.plan": {
+                    "Target": {
+                      "Entity": "measure.plan"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "measure"
+                      },
+                      "Object": {
+                        "Role": "measure.plan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_сумма_заказа_has_measure_ратио_план___факт": {
+                "Binding": {
+                  "ConceptualEntity": "data Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа"
+                    }
+                  },
+                  "measure.ратио_план___факт": {
+                    "Target": {
+                      "Entity": "measure.ратио_план___факт"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "measure.ратио_план___факт"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "measure_has_fact": {
+                "Binding": {
+                  "ConceptualEntity": "Measure"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "measure": {
+                    "Target": {
+                      "Entity": "measure"
+                    }
+                  },
+                  "measure.fact": {
+                    "Target": {
+                      "Entity": "measure.fact"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "measure"
+                      },
+                      "Object": {
+                        "Role": "measure.fact"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_сумма_заказа_has_measure_общие_затраты_план": {
+                "Binding": {
+                  "ConceptualEntity": "data Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа"
+                    }
+                  },
+                  "measure.общие_затраты_план": {
+                    "Target": {
+                      "Entity": "measure.общие_затраты_план"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "measure.общие_затраты_план"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_сумма_заказа_has_measure_общие_затраты_факт": {
+                "Binding": {
+                  "ConceptualEntity": "data Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа"
+                    }
+                  },
+                  "measure.общие_затраты_факт": {
+                    "Target": {
+                      "Entity": "measure.общие_затраты_факт"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "measure.общие_затраты_факт"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "measure_has_ратио_план___факт_100": {
+                "Binding": {
+                  "ConceptualEntity": "Measure"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "measure": {
+                    "Target": {
+                      "Entity": "measure"
+                    }
+                  },
+                  "measure.ратио_план___факт_100": {
+                    "Target": {
+                      "Entity": "measure.ратио_план___факт_100"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "measure"
+                      },
+                      "Object": {
+                        "Role": "measure.ратио_план___факт_100"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "data_сумма_заказа_has_data_заказ": {
+                "Binding": {
+                  "ConceptualEntity": "data Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "data_сумма_заказа": {
+                    "Target": {
+                      "Entity": "data_сумма_заказа"
+                    }
+                  },
+                  "data_заказ": {
+                    "Target": {
+                      "Entity": "data_заказ"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "data_заказ"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "data_заказ"
+                      },
+                      "Object": {
+                        "Role": "data_сумма_заказа"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              }
+            }
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"data Заказ\",\"data Справочник структура ТМ\",\"data Сумма заказа\",\"data Единица оборудования\",\"Measure\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.90.782.0 (21.02)"
+      },
+      {
+        "name": "__TEdtr",
+        "value": "1"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

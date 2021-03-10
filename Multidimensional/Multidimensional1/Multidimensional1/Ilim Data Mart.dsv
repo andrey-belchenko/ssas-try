@@ -1,0 +1,403 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7eb5c201-51f3-4b47-9cb0-f53592bb3d1d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Ilim Data Mart</ID>
+  <Name>Ilim Data Mart</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="22" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-7719" scrolltop="-6043" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="19553" y="23363" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fact" left="3133" top="18707" logicalid="11" controlid="1" masterid="0" hint1="0" hint2="0" width="7303" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000871c000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="data_FactEVA" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Project" left="0" top="6995" logicalid="12" controlid="2" masterid="0" hint1="0" hint2="0" width="4683" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e00004b12000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="data_DimProject" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Resource" left="12233" top="8018" logicalid="13" controlid="3" masterid="0" hint1="0" hint2="0" width="3175" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e0000670c000057070000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="data_DimResource" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Task" left="5641" top="11053" logicalid="14" controlid="4" masterid="0" hint1="0" hint2="0" width="4233" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e00008910000088130000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="data_DimTask" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="1942" top="11496" logicalid="15" controlid="5" masterid="0" hint1="0" hint2="0" width="1842" height="7511" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FactEVA-DimProject]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="9" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="2341" y="11995" />
+                    <point x="2341" y="16056" />
+                    <point x="3484" y="16056" />
+                    <point x="3484" y="18707" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="6808" top="15554" logicalid="16" controlid="6" masterid="0" hint1="0" hint2="0" width="1376" height="3453" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FactEVA-DimTask]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="5" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="7207" y="16053" />
+                    <point x="7207" y="17555" />
+                    <point x="7884" y="17555" />
+                    <point x="7884" y="18707" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="9234" top="9398" logicalid="17" controlid="7" masterid="0" hint1="0" hint2="0" width="3886" height="9609" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FactEVA-DimResource]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="1" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="12720" y="9897" />
+                    <point x="12720" y="14496" />
+                    <point x="9534" y="14496" />
+                    <point x="9534" y="18707" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Rate" left="4347" top="0" logicalid="18" controlid="8" masterid="0" hint1="0" hint2="0" width="4445" height="2787" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000e00005d110000e30a0000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="data_DimProjectResource" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="1961" top="-7" logicalid="19" controlid="9" masterid="0" hint1="0" hint2="0" width="2686" height="7502" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FK_data_DimProject_data_DimProjectResource]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="8" sourceattachpoint="10" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="2891" y="6995" />
+                    <point x="2891" y="6595" />
+                    <point x="2261" y="6595" />
+                    <point x="2261" y="293" />
+                    <point x="4347" y="293" />
+                  </connector>
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Polyline" left="8492" top="-7" logicalid="20" controlid="10" masterid="0" hint1="0" hint2="0" width="4041" height="9914" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobj>
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                    </ddsxmlobj>
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="dataSet.Relations[FK_data_DimResource_data_DimProjectResource]" vartype="8" />
+                      <property name="Virtual" value="0" vartype="11" />
+                      <property name="VisibleAP" value="0" vartype="3" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="8" sourceattachpoint="14" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                    <point x="12233" y="9507" />
+                    <point x="9670" y="9507" />
+                    <point x="9670" y="293" />
+                    <point x="8792" y="293" />
+                  </connector>
+                </ddscontrol>
+              </dds>
+</DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-7719</DiagramViewPortLeft>
+            <DiagramViewPortTop>-6043</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>75</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Ilim Data Mart</DataSourceID>
+  <Schema>
+    <xs:schema id="Ilim_x0020_Data_x0020_Mart" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Ilim_x0020_Data_x0020_Mart" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="64fb59e0-e960-4bf6-8d44-bb4aa9e1a11d">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="data_FactEVA" msprop:design-time-name="63e2509b-e24e-4127-9b0f-d082b66d18fe" msprop:FriendlyName="Fact" msprop:DbSchemaName="data" msprop:DbTableName="FactEVA" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ProjectUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="f86cf900-716f-4baa-8859-08d91d2362db" msprop:DbColumnName="ProjectUID" msprop:FriendlyName="ProjectUID" type="xs:string" minOccurs="0" />
+                  <xs:element name="TaskUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="29b05912-a18f-4441-9223-735fd24d8f9f" msprop:DbColumnName="TaskUID" msprop:FriendlyName="TaskUID" type="xs:string" minOccurs="0" />
+                  <xs:element name="ResourceUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="98c12ea8-34ec-4ac2-8b45-e419c524fbe4" msprop:DbColumnName="ResourceUID" msprop:FriendlyName="ResourceUID" type="xs:string" minOccurs="0" />
+                  <xs:element name="AssignmentUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="deb63aaa-2db5-49dd-82ee-feb2fd58e12d" msprop:DbColumnName="AssignmentUID" msprop:FriendlyName="AssignmentUID" type="xs:string" minOccurs="0" />
+                  <xs:element name="Date" msprop:design-time-name="07121d0f-575b-4deb-801c-67e7cab9d433" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="PlanWorkBaselineCost" msprop:design-time-name="828405dd-cc5e-4fb2-842d-61a713c44222" msprop:DbColumnName="PlanWorkBaselineCost" msprop:FriendlyName="PlanWorkBaselineCost" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="PlanWork" msprop:design-time-name="83c5c8e4-a21a-4971-816b-1f58c445b6bd" msprop:DbColumnName="PlanWork" msprop:FriendlyName="PlanWork" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CompletedWorkActualCost" msprop:design-time-name="e050bbce-9318-4932-9566-8be538c2a752" msprop:DbColumnName="CompletedWorkActualCost" msprop:FriendlyName="CompletedWorkActualCost" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CompletedWork" msprop:design-time-name="4161153b-f3bd-445c-b73c-dfd76c874e55" msprop:DbColumnName="CompletedWork" msprop:FriendlyName="CompletedWork" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CompletedWorkBaselineCost" msprop:design-time-name="4e0dc0ab-1ae2-48b8-ac2e-bcbeb47be845" msprop:DbColumnName="CompletedWorkBaselineCost" msprop:FriendlyName="CompletedWorkBaselineCost" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CumulativePlanWorkBaselineCost" msprop:design-time-name="0fe19161-fd06-467a-b1ed-8dc26b39cbeb" msprop:DbColumnName="CumulativePlanWorkBaselineCost" msprop:FriendlyName="CumulativePlanWorkBaselineCost" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CumulativePlanWork" msprop:design-time-name="9a2967f9-e98f-4afa-8981-fa8e362cd1eb" msprop:DbColumnName="CumulativePlanWork" msprop:FriendlyName="CumulativePlanWork" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CumulativeCompletedWorkActualCost" msprop:design-time-name="8f95e2a2-9600-4d36-90a9-415076d6d6a3" msprop:DbColumnName="CumulativeCompletedWorkActualCost" msprop:FriendlyName="CumulativeCompletedWorkActualCost" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CumulativeCompletedWork" msprop:design-time-name="4e30dbb4-8c89-498c-835a-24420fb2bcbb" msprop:DbColumnName="CumulativeCompletedWork" msprop:FriendlyName="CumulativeCompletedWork" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CumulativeCompletedWorkBaselineCost" msprop:design-time-name="c9c4421d-0c1a-46d5-a837-d421b624e9ab" msprop:DbColumnName="CumulativeCompletedWorkBaselineCost" msprop:FriendlyName="CumulativeCompletedWorkBaselineCost" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CumulativeValidToDate" msprop:design-time-name="9362eaf7-718c-40ef-b0d1-de6b4ff563b1" msprop:DbColumnName="CumulativeValidToDate" msprop:FriendlyName="CumulativeValidToDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="EstimationWorkActualCost" msprop:design-time-name="378cc5a5-4c18-4a60-8a05-62daf3add80f" msprop:DbColumnName="EstimationWorkActualCost" msprop:FriendlyName="EstimationWorkActualCost" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="EstimationWork" msprop:design-time-name="de4a7488-f96d-40cc-aae3-c003e184e36c" msprop:DbColumnName="EstimationWork" msprop:FriendlyName="EstimationWork" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="EstimationWorkBaselineCost" msprop:design-time-name="28e0f2cd-c611-48d2-9ca4-0a0790ad24af" msprop:DbColumnName="EstimationWorkBaselineCost" msprop:FriendlyName="EstimationWorkBaselineCost" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CumulativeEstimationWorkBaselineCost" msprop:design-time-name="87f59853-476d-476d-8899-769be32cff96" msprop:DbColumnName="CumulativeEstimationWorkBaselineCost" msprop:FriendlyName="CumulativeEstimationWorkBaselineCost" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CumulativeEstimationWorkActualCost" msprop:design-time-name="bac8e89e-8b66-4c47-b990-262b3d35c2dd" msprop:DbColumnName="CumulativeEstimationWorkActualCost" msprop:FriendlyName="CumulativeEstimationWorkActualCost" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="FinalBudget" msprop:design-time-name="5cc8e088-db7d-40c6-883d-ad71a483a519" msprop:DbColumnName="FinalBudget" msprop:FriendlyName="FinalBudget" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="EstimationFinalBudget" msprop:design-time-name="56fd2e01-0026-4c9c-bc8d-f259c88dd345" msprop:DbColumnName="EstimationFinalBudget" msprop:FriendlyName="EstimationFinalBudget" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CompletedWorkBaselineCostOld" msprop:design-time-name="ac42bb57-cd62-46bc-8c18-3cafa79f9bfb" msprop:DbColumnName="CompletedWorkBaselineCostOld" msprop:FriendlyName="CompletedWorkBaselineCostOld" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CumulativeCompletedWorkBaselineCostOld" msprop:design-time-name="e0e2e948-4dc9-47d3-b7f0-d3c8a517e30a" msprop:DbColumnName="CumulativeCompletedWorkBaselineCostOld" msprop:FriendlyName="CumulativeCompletedWorkBaselineCostOld" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CompletedWorkBaselineCostForecast" msprop:design-time-name="c8a69723-b56d-4a5d-b175-1f050f8a8c6a" msprop:DbColumnName="CompletedWorkBaselineCostForecast" msprop:FriendlyName="CompletedWorkBaselineCostForecast" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="CumulativeCompletedWorkBaselineCostForecast" msprop:design-time-name="e1b48ed5-ac3d-46ab-8f7f-2171a4c6e667" msprop:DbColumnName="CumulativeCompletedWorkBaselineCostForecast" msprop:FriendlyName="CumulativeCompletedWorkBaselineCostForecast" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="data_DimProject" msprop:design-time-name="251fdd42-933c-471c-883d-648d0a4d2d22" msprop:FriendlyName="Project" msprop:DbSchemaName="data" msprop:DbTableName="DimProject" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ProjectUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="c796352b-661c-484d-b024-a51728abc559" msprop:DbColumnName="ProjectUID" msprop:FriendlyName="ProjectUID" type="xs:string" />
+                  <xs:element name="BusinessUnit" msprop:design-time-name="f643087e-9f02-4a6a-8db7-e28f87789a10" msprop:DbColumnName="BusinessUnit" msprop:FriendlyName="BusinessUnit" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ProjectCode" msprop:design-time-name="8efff52c-6d1a-4ab1-8956-1c02d798060b" msprop:DbColumnName="ProjectCode" msprop:FriendlyName="ProjectCode" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ProjectCategory" msprop:design-time-name="6f74c853-e31d-4e8c-b3cb-ebb0cf0b9ed4" msprop:DbColumnName="ProjectCategory" msprop:FriendlyName="ProjectCategory" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="150" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ProjectName" msprop:design-time-name="01e3d652-0330-4531-bb2b-9d2ef9f642d3" msprop:DbColumnName="ProjectName" msprop:FriendlyName="ProjectName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="250" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ProjectCurrency" msprop:design-time-name="57061de0-02b0-4fcc-9c0e-043b6dafdd5e" msprop:DbColumnName="ProjectCurrency" msprop:FriendlyName="ProjectCurrency" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ProjectStartDate" msprop:design-time-name="b69b9b6b-f621-470e-ae1a-630428a4963c" msprop:DbColumnName="ProjectStartDate" msprop:FriendlyName="ProjectStartDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="ProjectFinishDate" msprop:design-time-name="aad1d7c1-d645-4d0f-bafa-f2a7704f4596" msprop:DbColumnName="ProjectFinishDate" msprop:FriendlyName="ProjectFinishDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="SignAchievementTEP" msprop:design-time-name="c75ae82a-956b-419c-8eff-ee1882938b3c" msprop:DbColumnName="SignAchievementTEP" msprop:FriendlyName="SignAchievementTEP" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4000" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ApplyEarnedVolumeMethod" msprop:design-time-name="55653c37-6fcc-4b44-9bf0-37b9239a2242" msprop:DbColumnName="ApplyEarnedVolumeMethod" msprop:FriendlyName="ApplyEarnedVolumeMethod" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="Milestone1BaselineDate" msprop:design-time-name="0982d760-fa47-4399-9740-b339ce67a500" msprop:DbColumnName="Milestone1BaselineDate" msprop:FriendlyName="Milestone1BaselineDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Milestone2BaselineDate" msprop:design-time-name="38d0ce5e-5354-4871-89a0-381152a4c7c9" msprop:DbColumnName="Milestone2BaselineDate" msprop:FriendlyName="Milestone2BaselineDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Milestone3BaselineDate" msprop:design-time-name="48659ae4-7d51-4f04-ac92-b84db70d7a6b" msprop:DbColumnName="Milestone3BaselineDate" msprop:FriendlyName="Milestone3BaselineDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Milestone4BaselineDate" msprop:design-time-name="006d1fe2-3a44-431a-9f2f-535d000a217c" msprop:DbColumnName="Milestone4BaselineDate" msprop:FriendlyName="Milestone4BaselineDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Milestone5BaselineDate" msprop:design-time-name="70de6a62-0705-46e0-aa0c-f2f872bbd678" msprop:DbColumnName="Milestone5BaselineDate" msprop:FriendlyName="Milestone5BaselineDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Milestone6BaselineDate" msprop:design-time-name="1f29fb57-2833-4f1d-af61-02069b74dc75" msprop:DbColumnName="Milestone6BaselineDate" msprop:FriendlyName="Milestone6BaselineDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Milestone1PlanDate" msprop:design-time-name="0306dad6-509a-4154-9231-0788fb8cebac" msprop:DbColumnName="Milestone1PlanDate" msprop:FriendlyName="Milestone1PlanDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Milestone2PlanDate" msprop:design-time-name="146d1d49-3be6-407c-b17f-ac0f3d8fb0f4" msprop:DbColumnName="Milestone2PlanDate" msprop:FriendlyName="Milestone2PlanDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Milestone3PlanDate" msprop:design-time-name="ded7744d-aecc-46de-8d76-ceb8dc543443" msprop:DbColumnName="Milestone3PlanDate" msprop:FriendlyName="Milestone3PlanDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Milestone4PlanDate" msprop:design-time-name="6307676a-2bf7-47ae-b680-45c0529b7eee" msprop:DbColumnName="Milestone4PlanDate" msprop:FriendlyName="Milestone4PlanDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Milestone5PlanDate" msprop:design-time-name="6b4dd3e2-3f9a-480d-a0e6-e9df9b0193e1" msprop:DbColumnName="Milestone5PlanDate" msprop:FriendlyName="Milestone5PlanDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Milestone6PlanDate" msprop:design-time-name="d0a9ae59-3e3d-429b-98ba-4e3257814044" msprop:DbColumnName="Milestone6PlanDate" msprop:FriendlyName="Milestone6PlanDate" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="data_DimResource" msprop:design-time-name="36dea495-a5e8-48f5-9237-8b914bc9f2cc" msprop:FriendlyName="Resource" msprop:DbSchemaName="data" msprop:DbTableName="DimResource" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ResourceUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="84996cf8-d069-4912-b766-dbf5bf908a85" msprop:DbColumnName="ResourceUID" msprop:FriendlyName="ResourceUID" type="xs:string" />
+                  <xs:element name="ResourceName" msprop:design-time-name="79c47a6f-e9da-4546-9a43-f8d946ca75de" msprop:DbColumnName="ResourceName" msprop:FriendlyName="ResourceName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1000" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="data_DimTask" msprop:design-time-name="9394d775-2e4d-4e7b-b436-0f56f5c6db1a" msprop:FriendlyName="Task" msprop:DbSchemaName="data" msprop:DbTableName="DimTask" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TaskUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="81a60e61-34ea-4ad6-b843-16ed095c4212" msprop:DbColumnName="TaskUID" msprop:FriendlyName="TaskUID" type="xs:string" />
+                  <xs:element name="TaskName" msprop:design-time-name="ad5dff81-9fbd-41d4-9434-92308b9b0780" msprop:DbColumnName="TaskName" msprop:FriendlyName="TaskName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4000" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TaskWBS" msprop:design-time-name="ebce5b8e-22da-40c4-9928-33a6df3ae052" msprop:DbColumnName="TaskWBS" msprop:FriendlyName="TaskWBS" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TaskOutlineLevel" msprop:design-time-name="9b577c6d-f03e-4135-8230-afaf1434244a" msprop:DbColumnName="TaskOutlineLevel" msprop:FriendlyName="TaskOutlineLevel" type="xs:int" minOccurs="0" />
+                  <xs:element name="TaskIndex" msprop:design-time-name="3354e505-cfa6-4b70-8906-48239fdf8e37" msprop:DbColumnName="TaskIndex" msprop:FriendlyName="TaskIndex" type="xs:int" minOccurs="0" />
+                  <xs:element name="ProjectUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="ee9a7079-e6f0-4205-8429-db5dc496b656" msprop:DbColumnName="ProjectUID" msprop:FriendlyName="ProjectUID" type="xs:string" minOccurs="0" />
+                  <xs:element name="ParentTaskUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="ade34c14-28c1-4207-abf0-ba0b3d68f541" msprop:DbColumnName="ParentTaskUID" msprop:FriendlyName="ParentTaskUID" type="xs:string" minOccurs="0" />
+                  <xs:element name="MilestoneId" msprop:design-time-name="524b2156-234a-445a-aa02-5a89c55ffdf1" msprop:DbColumnName="MilestoneId" msprop:FriendlyName="MilestoneId" type="xs:int" minOccurs="0" />
+                  <xs:element name="TaskPercentCompleted" msprop:design-time-name="bae04168-9528-481e-92c3-fc8c0664c0e3" msprop:DbColumnName="TaskPercentCompleted" msprop:FriendlyName="TaskPercentCompleted" type="xs:int" minOccurs="0" />
+                  <xs:element name="TaskFinishVariance" msprop:design-time-name="ef9374d4-2c96-428f-8ad7-5b0d025d3b42" msprop:DbColumnName="TaskFinishVariance" msprop:FriendlyName="TaskFinishVariance" type="xs:int" minOccurs="0" />
+                  <xs:element name="TaskStartDate" msprop:design-time-name="a14c1e52-452e-4b5c-b436-c3adbf07825f" msprop:DbColumnName="TaskStartDate" msprop:FriendlyName="TaskStartDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="TaskFinishDate" msprop:design-time-name="5990538f-eb89-457b-baaa-d343650c0f3b" msprop:DbColumnName="TaskFinishDate" msprop:FriendlyName="TaskFinishDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="TaskBaselineStartDate" msprop:design-time-name="f71dc5a0-7d81-4243-8e53-44c03825f4bc" msprop:DbColumnName="TaskBaselineStartDate" msprop:FriendlyName="TaskBaselineStartDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="TaskBaselineFinishDate" msprop:design-time-name="f169c912-4607-4a56-a479-33ece86509f6" msprop:DbColumnName="TaskBaselineFinishDate" msprop:FriendlyName="TaskBaselineFinishDate" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="TaskActualFinishDate" msprop:design-time-name="43cd8ef2-cb38-4e8f-a3e8-5685cffef54d" msprop:DbColumnName="TaskActualFinishDate" msprop:FriendlyName="TaskActualFinishDate" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="data_DimProjectResource" msprop:design-time-name="be5b7e0d-bfd6-4bee-a3e0-1e18fa0622a7" msprop:FriendlyName="Rate" msprop:DbSchemaName="data" msprop:DbTableName="DimProjectResource" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ProjectUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="82d9dfe4-5148-4eed-907e-f2083c486e54" msprop:DbColumnName="ProjectUID" msprop:FriendlyName="ProjectUID" type="xs:string" minOccurs="0" />
+                  <xs:element name="ResourceUID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="57bc1d68-f4a3-45ec-81be-d64d4cfef733" msprop:DbColumnName="ResourceUID" msprop:FriendlyName="ResourceUID" type="xs:string" minOccurs="0" />
+                  <xs:element name="ResourceRate" msprop:design-time-name="051302f7-bd3c-46bb-947a-ee192658d5f2" msprop:DbColumnName="ResourceRate" msprop:FriendlyName="ResourceRate" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="ResourceBaselineRate" msprop:design-time-name="aa89bb52-2509-47fb-ae38-316f6d3d8a1b" msprop:DbColumnName="ResourceBaselineRate" msprop:FriendlyName="ResourceBaselineRate" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//data_DimProject" />
+          <xs:field xpath="ProjectUID" />
+        </xs:unique>
+        <xs:unique name="data_DimResource_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//data_DimResource" />
+          <xs:field xpath="ResourceUID" />
+        </xs:unique>
+        <xs:unique name="data_DimTask_Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//data_DimTask" />
+          <xs:field xpath="TaskUID" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="FactEVA-DimProject" msdata:parent="data_DimProject" msdata:child="data_FactEVA" msdata:parentkey="ProjectUID" msdata:childkey="ProjectUID" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="FactEVA-DimTask" msdata:parent="data_DimTask" msdata:child="data_FactEVA" msdata:parentkey="TaskUID" msdata:childkey="TaskUID" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="FactEVA-DimResource" msdata:parent="data_DimResource" msdata:child="data_FactEVA" msdata:parentkey="ResourceUID" msdata:childkey="ResourceUID" msprop:IsLogical="True" msprop:Description="" />
+          <msdata:Relationship name="FK_data_DimProject_data_DimProjectResource" msdata:parent="data_DimProject" msdata:child="data_DimProjectResource" msdata:parentkey="ProjectUID" msdata:childkey="ProjectUID" />
+          <msdata:Relationship name="FK_data_DimResource_data_DimProjectResource" msdata:parent="data_DimResource" msdata:child="data_DimProjectResource" msdata:parentkey="ResourceUID" msdata:childkey="ResourceUID" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <Ilim_x0020_Data_x0020_Mart xmlns="" />
+  </Schema>
+</DataSourceView>
