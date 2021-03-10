@@ -31,7 +31,219 @@
     ],
     "tables": [
       {
-        "name": "data Справочник структура ТМ",
+        "name": "Календарь",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": [
+                  "<Format Format=\"DateTimeCustom\">",
+                  "\t<DateTimes>",
+                  "\t\t<DateTime LCID=\"1049\" Group=\"ShortDate\" FormatString=\"dd.MM.yyyy\" />",
+                  "\t</DateTimes>",
+                  "</Format>"
+                ]
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Год",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calendar-17db1fb1-55d3-4958-b48d-a2f7bbc608f3",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "CALENDAR(MIN('Заказ'[БазисСрокКонца]), MAX('Заказ'[БазисСрокКонца]))"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "0a85ba74defd4e3986ace1cefbbc34d6"
+          }
+        ]
+      },
+      {
+        "name": "Measure",
+        "columns": [
+          {
+            "name": "Столбец1",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "Столбец1",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Столбец1"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Measure-87e138c2-f501-4d4a-836f-0bf578fcaa53",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Источник = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Столбец1 = _t]),",
+                "    #\"Измененный тип\" = Table.TransformColumnTypes(Источник,{{\"Столбец1\", type text}})",
+                "in",
+                "    #\"Измененный тип\""
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Ратио План / Факт",
+            "expression": [
+              "",
+              "var p1 = DIVIDE([Общие затраты Факт],[Общие затраты План])",
+              "var p2 =",
+              "    IF(",
+              "        p1 = -0,",
+              "        p1 * -1,",
+              "        p1)",
+              "return p2"
+            ],
+            "formatString": "#,0.00%;-#,0.00%;#,0.00%"
+          },
+          {
+            "name": "Общие затраты План",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    SUM('Сумма заказа'[Сумма заказа]),",
+              "    'Сумма заказа'[Тип значения] = \"20\"",
+              ")"
+            ],
+            "formatString": "#,0.00"
+          },
+          {
+            "name": "Общие затраты Факт",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    SUM('Сумма заказа'[Сумма заказа]),",
+              "    'Сумма заказа'[Тип значения] = \"10\"",
+              ")"
+            ],
+            "formatString": "#,0.00"
+          },
+          {
+            "name": "Ратио План / Факт -100%",
+            "expression": [
+              "",
+              "var p1 = ",
+              "    IF(",
+              "        [Общие затраты План] = BLANK(),",
+              "        BLANK(),",
+              "        [Ратио План / Факт] -1",
+              "    )",
+              "var p2 = ",
+              "    IF(",
+              "        p1 < 0,",
+              "        0,",
+              "        p1)",
+              "",
+              "return p2"
+            ],
+            "formatString": "#,0.00%;-#,0.00%;#,0.00%"
+          },
+          {
+            "name": "Кол-во единиц оборудования в ЕО",
+            "expression": "DISTINCTCOUNT('Единица оборудования'[Единица оборудования])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Кол-во единиц оборудования в Заказ",
+            "expression": "DISTINCTCOUNT('Заказ'[Единица оборудования])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Кол-во единиц оборудования в Структура ТМ",
+            "expression": "DISTINCTCOUNT('Справочник структура ТМ'[Единица оборудования])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Кол-во уникальных заказов в Заказ",
+            "expression": "DISTINCTCOUNT('Заказ'[Заказ])",
+            "formatString": "0"
+          },
+          {
+            "name": "Кол-во уникальных заказов в Сумма заказа",
+            "expression": "DISTINCTCOUNT('Сумма заказа'[Заказ])",
+            "formatString": "0"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ]
+      },
+      {
+        "name": "Справочник структура ТМ",
         "columns": [
           {
             "name": "Действительно ПО",
@@ -377,7 +589,7 @@
         ],
         "partitions": [
           {
-            "name": "data Справочник структура ТМ-48e737b4-5b5b-4ac1-8851-fffb1652470c",
+            "name": "Справочник структура ТМ-48e737b4-5b5b-4ac1-8851-fffb1652470c",
             "mode": "import",
             "source": {
               "type": "m",
@@ -385,9 +597,9 @@
                 "let",
                 " ",
                 "    LO.DataMart.KPI =  #\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
-                "    #\"data_Справочник структура ТМ\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Справочник структура ТМ\"]}[Data],",
+                "    #\"Справочник структура ТМ\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Справочник структура ТМ\"]}[Data],",
                 "    #\"Строки с примененным фильтром\" = ",
-                "        Table.SelectRows(#\"data_Справочник структура ТМ\", each ",
+                "        Table.SelectRows(#\"Справочник структура ТМ\", each ",
                 "            [Завод] = \"NN\" or ",
                 "            [Завод] = \"PN\" or ",
                 "            [Завод] = \"VN\" or",
@@ -414,7 +626,7 @@
         ]
       },
       {
-        "name": "data Сумма заказа",
+        "name": "Сумма заказа",
         "columns": [
           {
             "name": "Вариант ФинансГода",
@@ -591,7 +803,7 @@
             "name": "БазисСрокКонца",
             "dataType": "dateTime",
             "isDataTypeInferred": true,
-            "expression": "RELATED('data Заказ'[БазисСрокКонца])",
+            "expression": "RELATED('Заказ'[БазисСрокКонца])",
             "summarizeBy": "none",
             "annotations": [
               {
@@ -640,16 +852,16 @@
         ],
         "partitions": [
           {
-            "name": "data Сумма заказа-58401320-b34d-46f1-a950-40824448587f",
+            "name": "Сумма заказа-58401320-b34d-46f1-a950-40824448587f",
             "mode": "import",
             "source": {
               "type": "m",
               "expression": [
                 "let",
                 "    LO.DataMart.KPI = #\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
-                "    #\"data_Сумма заказа\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Сумма заказа\"]}[Data]",
+                "    #\"Сумма заказа\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Сумма заказа\"]}[Data]",
                 "in",
-                "    #\"data_Сумма заказа\""
+                "    #\"Сумма заказа\""
               ]
             }
           }
@@ -665,229 +877,7 @@
         ]
       },
       {
-        "name": "Calendar",
-        "columns": [
-          {
-            "type": "calculatedTableColumn",
-            "name": "Date",
-            "dataType": "dateTime",
-            "isNameInferred": true,
-            "isDataTypeInferred": true,
-            "sourceColumn": "[Date]",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "Format",
-                "value": [
-                  "<Format Format=\"DateTimeCustom\">",
-                  "\t<DateTimes>",
-                  "\t\t<DateTime LCID=\"1049\" Group=\"ShortDate\" FormatString=\"dd.MM.yyyy\" />",
-                  "\t</DateTimes>",
-                  "</Format>"
-                ]
-              },
-              {
-                "name": "DataTypeAtRefresh",
-                "value": "DateTime#####not a type"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "Год",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "expression": "YEAR([Date])",
-            "formatString": "0",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "Format",
-                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />"
-              },
-              {
-                "name": "DataTypeAtRefresh",
-                "value": "Int64#####not a type"
-              }
-            ]
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Calendar-17db1fb1-55d3-4958-b48d-a2f7bbc608f3",
-            "mode": "import",
-            "source": {
-              "type": "calculated",
-              "expression": "CALENDAR(MIN('data Заказ'[БазисСрокКонца]), MAX('data Заказ'[БазисСрокКонца]))"
-            }
-          }
-        ],
-        "annotations": [
-          {
-            "name": "PBI_Id",
-            "value": "0a85ba74defd4e3986ace1cefbbc34d6"
-          }
-        ]
-      },
-      {
-        "name": "Measure",
-        "columns": [
-          {
-            "name": "Столбец1",
-            "dataType": "string",
-            "isHidden": true,
-            "sourceColumn": "Столбец1",
-            "summarizeBy": "none",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic"
-              },
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Text\" />"
-              },
-              {
-                "name": "DataTypeAtRefresh",
-                "value": "String#####not a type"
-              },
-              {
-                "name": "PBI_NameAtRefresh",
-                "value": "Столбец1"
-              },
-              {
-                "name": "PBI_WasHiddenAtRefresh",
-                "value": "False"
-              }
-            ]
-          }
-        ],
-        "partitions": [
-          {
-            "name": "Measure-87e138c2-f501-4d4a-836f-0bf578fcaa53",
-            "mode": "import",
-            "source": {
-              "type": "m",
-              "expression": [
-                "let",
-                "    Источник = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Столбец1 = _t]),",
-                "    #\"Измененный тип\" = Table.TransformColumnTypes(Источник,{{\"Столбец1\", type text}})",
-                "in",
-                "    #\"Измененный тип\""
-              ]
-            }
-          }
-        ],
-        "measures": [
-          {
-            "name": "Ратио План / Факт",
-            "expression": [
-              "",
-              "var p1 = DIVIDE([Общие затраты Факт],[Общие затраты План])",
-              "var p2 =",
-              "    IF(",
-              "        p1 = -0,",
-              "        p1 * -1,",
-              "        p1)",
-              "return p2"
-            ],
-            "formatString": "#,0.00%;-#,0.00%;#,0.00%"
-          },
-          {
-            "name": "Общие затраты План",
-            "expression": [
-              "",
-              "CALCULATE(",
-              "    SUM('data Сумма заказа'[Сумма заказа]),",
-              "    'data Сумма заказа'[Тип значения] = \"20\"",
-              ")"
-            ],
-            "formatString": "#,0.00"
-          },
-          {
-            "name": "Общие затраты Факт",
-            "expression": [
-              "",
-              "CALCULATE(",
-              "    SUM('data Сумма заказа'[Сумма заказа]),",
-              "    'data Сумма заказа'[Тип значения] = \"10\"",
-              ")"
-            ],
-            "formatString": "#,0.00"
-          },
-          {
-            "name": "Ратио План / Факт -100%",
-            "expression": [
-              "",
-              "var p1 = ",
-              "    IF(",
-              "        [Общие затраты План] = BLANK(),",
-              "        BLANK(),",
-              "        [Ратио План / Факт] -1",
-              "    )",
-              "var p2 = ",
-              "    IF(",
-              "        p1 < 0,",
-              "        0,",
-              "        p1)",
-              "",
-              "return p2"
-            ],
-            "formatString": "#,0.00%;-#,0.00%;#,0.00%"
-          },
-          {
-            "name": "Кол-во единиц оборудования в ЕО",
-            "expression": "DISTINCTCOUNT('data Единица оборудования'[Единица оборудования])",
-            "formatString": "#,0"
-          },
-          {
-            "name": "Кол-во единиц оборудования в Заказ",
-            "expression": "DISTINCTCOUNT('data Заказ'[Единица оборудования])",
-            "formatString": "#,0"
-          },
-          {
-            "name": "Кол-во единиц оборудования в Структура ТМ",
-            "expression": "DISTINCTCOUNT('data Справочник структура ТМ'[Единица оборудования])",
-            "formatString": "#,0"
-          },
-          {
-            "name": "Кол-во уникальных заказов в Заказ",
-            "expression": "DISTINCTCOUNT('data Заказ'[Заказ])",
-            "formatString": "0"
-          },
-          {
-            "name": "Кол-во уникальных заказов в Сумма заказа",
-            "expression": "DISTINCTCOUNT('data Сумма заказа'[Заказ])",
-            "formatString": "0"
-          },
-          {
-            "name": "bbb",
-            "expression": [
-              "",
-              "CALCULATE(",
-              "    SUM('data Сумма заказа'[Сумма заказа]),",
-              "    'data Сумма заказа'[Тип значения] = \"20\"",
-              ")"
-            ]
-          }
-        ],
-        "annotations": [
-          {
-            "name": "PBI_ResultType",
-            "value": "Table"
-          }
-        ]
-      },
-      {
-        "name": "data Заказ",
+        "name": "Заказ",
         "columns": [
           {
             "name": "Вид заказа",
@@ -1317,7 +1307,7 @@
         ],
         "partitions": [
           {
-            "name": "data Заказ-e2efbacd-e2c1-4618-bd38-a7ef88e0a726",
+            "name": "Заказ-e2efbacd-e2c1-4618-bd38-a7ef88e0a726",
             "mode": "import",
             "source": {
               "type": "m",
@@ -1325,9 +1315,9 @@
                 "let",
                 "  ",
                 "    LO.DataMart.KPI =#\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
-                "    data_Заказ = LO.DataMart.KPI{[Schema=\"data\",Item=\"Заказ\"]}[Data]",
+                "    Заказ = LO.DataMart.KPI{[Schema=\"data\",Item=\"Заказ\"]}[Data]",
                 "in",
-                "    data_Заказ"
+                "    Заказ"
               ]
             }
           }
@@ -1343,7 +1333,7 @@
         ]
       },
       {
-        "name": "data Единица оборудования",
+        "name": "Единица оборудования",
         "columns": [
           {
             "name": "Единица оборудования",
@@ -1689,7 +1679,7 @@
         ],
         "partitions": [
           {
-            "name": "data Единица оборудования-686e23de-2763-4fc7-a7d9-c14d6f2b4f1b",
+            "name": "Единица оборудования-686e23de-2763-4fc7-a7d9-c14d6f2b4f1b",
             "mode": "import",
             "source": {
               "type": "m",
@@ -1697,9 +1687,9 @@
                 "let",
                 " ",
                 "    LO.DataMart.KPI =#\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
-                "    #\"data_Единица оборудования\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Единица оборудования\"]}[Data]",
+                "    #\"Единица оборудования\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Единица оборудования\"]}[Data]",
                 "in",
-                "    #\"data_Единица оборудования\""
+                "    #\"Единица оборудования\""
               ]
             }
           }
@@ -1718,23 +1708,23 @@
     "relationships": [
       {
         "name": "46785dac-f81e-4499-b606-8a0d3ac56473",
-        "fromTable": "data Сумма заказа",
+        "fromTable": "Сумма заказа",
         "fromColumn": "Заказ",
-        "toTable": "data Заказ",
+        "toTable": "Заказ",
         "toColumn": "Заказ"
       },
       {
         "name": "250444fa-2112-4b71-8bb4-3d3f75076b03",
-        "fromTable": "data Заказ",
+        "fromTable": "Заказ",
         "fromColumn": "Единица оборудования",
-        "toTable": "data Справочник структура ТМ",
+        "toTable": "Справочник структура ТМ",
         "toColumn": "Единица оборудования"
       },
       {
         "name": "bebde7de-b295-48ef-bd00-4c4974cf4d8a",
-        "fromTable": "data Заказ",
+        "fromTable": "Заказ",
         "fromColumn": "БазисСрокКонца",
-        "toTable": "Calendar",
+        "toTable": "Календарь",
         "toColumn": "Date"
       }
     ],
@@ -1747,16 +1737,16 @@
             "Language": "en-US",
             "DynamicImprovement": "HighConfidence",
             "Entities": {
-              "data_справочник_структура_ТМ": {
+              "справочник_структура_ТМ": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Справочник структура ТМ"
+                    "ConceptualEntity": "Справочник структура ТМ"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "data справочник структура ТМ": {
+                    "справочник структура ТМ": {
                       "State": "Generated"
                     }
                   },
@@ -1811,10 +1801,10 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ.действительно_ПО": {
+              "справочник_структура_ТМ.действительно_ПО": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualEntity": "Справочник структура ТМ",
                     "ConceptualProperty": "Действительно ПО"
                   }
                 },
@@ -1834,10 +1824,10 @@
                 ],
                 "SemanticType": "Time"
               },
-              "data_справочник_структура_ТМ.действительно_с": {
+              "справочник_структура_ТМ.действительно_с": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualEntity": "Справочник структура ТМ",
                     "ConceptualProperty": "Действительно С"
                   }
                 },
@@ -1857,10 +1847,10 @@
                 ],
                 "SemanticType": "Time"
               },
-              "data_справочник_структура_ТМ.дата_изменения": {
+              "справочник_структура_ТМ.дата_изменения": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualEntity": "Справочник структура ТМ",
                     "ConceptualProperty": "Дата изменения"
                   }
                 },
@@ -1880,10 +1870,10 @@
                 ],
                 "SemanticType": "Time"
               },
-              "data_справочник_структура_ТМ.класс_ЕО": {
+              "справочник_структура_ТМ.класс_ЕО": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualEntity": "Справочник структура ТМ",
                     "ConceptualProperty": "Класс ЕО"
                   }
                 },
@@ -1896,10 +1886,10 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ.техническое_место": {
+              "справочник_структура_ТМ.техническое_место": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualEntity": "Справочник структура ТМ",
                     "ConceptualProperty": "Техническое Место"
                   }
                 },
@@ -1912,10 +1902,10 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ.блок": {
+              "справочник_структура_ТМ.блок": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualEntity": "Справочник структура ТМ",
                     "ConceptualProperty": "Блок"
                   }
                 },
@@ -1928,10 +1918,10 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ.установка": {
+              "справочник_структура_ТМ.установка": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualEntity": "Справочник структура ТМ",
                     "ConceptualProperty": "Установка"
                   }
                 },
@@ -1954,10 +1944,10 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ.производство": {
+              "справочник_структура_ТМ.производство": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualEntity": "Справочник структура ТМ",
                     "ConceptualProperty": "Производство"
                   }
                 },
@@ -1970,10 +1960,10 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ.завод": {
+              "справочник_структура_ТМ.завод": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Справочник структура ТМ",
+                    "ConceptualEntity": "Справочник структура ТМ",
                     "ConceptualProperty": "Завод"
                   }
                 },
@@ -1986,16 +1976,16 @@
                   }
                 ]
               },
-              "data_сумма_заказа": {
+              "сумма_заказа": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Сумма заказа"
+                    "ConceptualEntity": "Сумма заказа"
                   }
                 },
                 "State": "Generated",
                 "Terms": [
                   {
-                    "data сумма заказа": {
+                    "сумма заказа": {
                       "State": "Generated"
                     }
                   },
@@ -2050,10 +2040,10 @@
                   }
                 ]
               },
-              "data_сумма_заказа.вариант_ФинансГода": {
+              "сумма_заказа.вариант_ФинансГода": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualEntity": "Сумма заказа",
                     "ConceptualProperty": "Вариант ФинансГода"
                   }
                 },
@@ -2066,10 +2056,10 @@
                   }
                 ]
               },
-              "data_сумма_заказа.ФГ_период": {
+              "сумма_заказа.ФГ_период": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualEntity": "Сумма заказа",
                     "ConceptualProperty": "ФГ/период"
                   }
                 },
@@ -2100,10 +2090,10 @@
                   }
                 ]
               },
-              "data_сумма_заказа.заказ": {
+              "сумма_заказа.заказ": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualEntity": "Сумма заказа",
                     "ConceptualProperty": "Заказ"
                   }
                 },
@@ -2117,10 +2107,10 @@
                   }
                 ]
               },
-              "data_сумма_заказа.тип_значения": {
+              "сумма_заказа.тип_значения": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualEntity": "Сумма заказа",
                     "ConceptualProperty": "Тип значения"
                   }
                 },
@@ -2133,10 +2123,10 @@
                   }
                 ]
               },
-              "data_сумма_заказа.сумма_заказа": {
+              "сумма_заказа.сумма_заказа": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualEntity": "Сумма заказа",
                     "ConceptualProperty": "Сумма заказа"
                   }
                 },
@@ -2149,10 +2139,10 @@
                   }
                 ]
               },
-              "data_сумма_заказа.тип_валюты": {
+              "сумма_заказа.тип_валюты": {
                 "Definition": {
                   "Binding": {
-                    "ConceptualEntity": "data Сумма заказа",
+                    "ConceptualEntity": "Сумма заказа",
                     "ConceptualProperty": "Тип валюты"
                   }
                 },
@@ -2467,20 +2457,20 @@
               }
             },
             "Relationships": {
-              "data_справочник_структура_ТМ_has_еденица_оборудования": {
+              "справочник_структура_ТМ_has_еденица_оборудования": {
                 "Binding": {
-                  "ConceptualEntity": "data Справочник структура ТМ"
+                  "ConceptualEntity": "Справочник структура ТМ"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_справочник_структура_ТМ": {
+                  "справочник_структура_ТМ": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ"
+                      "Entity": "справочник_структура_ТМ"
                     }
                   },
-                  "data_справочник_структура_ТМ.еденица_оборудования": {
+                  "справочник_структура_ТМ.еденица_оборудования": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ.еденица_оборудования"
+                      "Entity": "справочник_структура_ТМ.еденица_оборудования"
                     }
                   }
                 },
@@ -2488,10 +2478,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_справочник_структура_ТМ"
+                        "Role": "справочник_структура_ТМ"
                       },
                       "Object": {
-                        "Role": "data_справочник_структура_ТМ.еденица_оборудования"
+                        "Role": "справочник_структура_ТМ.еденица_оборудования"
                       }
                     },
                     "State": "Generated",
@@ -2499,20 +2489,20 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ_has_действительно_ПО": {
+              "справочник_структура_ТМ_has_действительно_ПО": {
                 "Binding": {
-                  "ConceptualEntity": "data Справочник структура ТМ"
+                  "ConceptualEntity": "Справочник структура ТМ"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_справочник_структура_ТМ": {
+                  "справочник_структура_ТМ": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ"
+                      "Entity": "справочник_структура_ТМ"
                     }
                   },
-                  "data_справочник_структура_ТМ.действительно_ПО": {
+                  "справочник_структура_ТМ.действительно_ПО": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ.действительно_ПО"
+                      "Entity": "справочник_структура_ТМ.действительно_ПО"
                     }
                   }
                 },
@@ -2520,10 +2510,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_справочник_структура_ТМ"
+                        "Role": "справочник_структура_ТМ"
                       },
                       "Object": {
-                        "Role": "data_справочник_структура_ТМ.действительно_ПО"
+                        "Role": "справочник_структура_ТМ.действительно_ПО"
                       }
                     },
                     "State": "Generated",
@@ -2531,20 +2521,20 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ_has_действительно_с": {
+              "справочник_структура_ТМ_has_действительно_с": {
                 "Binding": {
-                  "ConceptualEntity": "data Справочник структура ТМ"
+                  "ConceptualEntity": "Справочник структура ТМ"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_справочник_структура_ТМ": {
+                  "справочник_структура_ТМ": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ"
+                      "Entity": "справочник_структура_ТМ"
                     }
                   },
-                  "data_справочник_структура_ТМ.действительно_с": {
+                  "справочник_структура_ТМ.действительно_с": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ.действительно_с"
+                      "Entity": "справочник_структура_ТМ.действительно_с"
                     }
                   }
                 },
@@ -2552,10 +2542,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_справочник_структура_ТМ"
+                        "Role": "справочник_структура_ТМ"
                       },
                       "Object": {
-                        "Role": "data_справочник_структура_ТМ.действительно_с"
+                        "Role": "справочник_структура_ТМ.действительно_с"
                       }
                     },
                     "State": "Generated",
@@ -2563,20 +2553,20 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ_has_дата_изменения": {
+              "справочник_структура_ТМ_has_дата_изменения": {
                 "Binding": {
-                  "ConceptualEntity": "data Справочник структура ТМ"
+                  "ConceptualEntity": "Справочник структура ТМ"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_справочник_структура_ТМ": {
+                  "справочник_структура_ТМ": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ"
+                      "Entity": "справочник_структура_ТМ"
                     }
                   },
-                  "data_справочник_структура_ТМ.дата_изменения": {
+                  "справочник_структура_ТМ.дата_изменения": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ.дата_изменения"
+                      "Entity": "справочник_структура_ТМ.дата_изменения"
                     }
                   }
                 },
@@ -2584,10 +2574,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_справочник_структура_ТМ"
+                        "Role": "справочник_структура_ТМ"
                       },
                       "Object": {
-                        "Role": "data_справочник_структура_ТМ.дата_изменения"
+                        "Role": "справочник_структура_ТМ.дата_изменения"
                       }
                     },
                     "State": "Generated",
@@ -2595,20 +2585,20 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ_has_класс_ЕО": {
+              "справочник_структура_ТМ_has_класс_ЕО": {
                 "Binding": {
-                  "ConceptualEntity": "data Справочник структура ТМ"
+                  "ConceptualEntity": "Справочник структура ТМ"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_справочник_структура_ТМ": {
+                  "справочник_структура_ТМ": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ"
+                      "Entity": "справочник_структура_ТМ"
                     }
                   },
-                  "data_справочник_структура_ТМ.класс_ЕО": {
+                  "справочник_структура_ТМ.класс_ЕО": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ.класс_ЕО"
+                      "Entity": "справочник_структура_ТМ.класс_ЕО"
                     }
                   }
                 },
@@ -2616,10 +2606,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_справочник_структура_ТМ"
+                        "Role": "справочник_структура_ТМ"
                       },
                       "Object": {
-                        "Role": "data_справочник_структура_ТМ.класс_ЕО"
+                        "Role": "справочник_структура_ТМ.класс_ЕО"
                       }
                     },
                     "State": "Generated",
@@ -2627,20 +2617,20 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ_has_техническое_место": {
+              "справочник_структура_ТМ_has_техническое_место": {
                 "Binding": {
-                  "ConceptualEntity": "data Справочник структура ТМ"
+                  "ConceptualEntity": "Справочник структура ТМ"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_справочник_структура_ТМ": {
+                  "справочник_структура_ТМ": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ"
+                      "Entity": "справочник_структура_ТМ"
                     }
                   },
-                  "data_справочник_структура_ТМ.техническое_место": {
+                  "справочник_структура_ТМ.техническое_место": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ.техническое_место"
+                      "Entity": "справочник_структура_ТМ.техническое_место"
                     }
                   }
                 },
@@ -2648,10 +2638,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_справочник_структура_ТМ"
+                        "Role": "справочник_структура_ТМ"
                       },
                       "Object": {
-                        "Role": "data_справочник_структура_ТМ.техническое_место"
+                        "Role": "справочник_структура_ТМ.техническое_место"
                       }
                     },
                     "State": "Generated",
@@ -2659,20 +2649,20 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ_has_блок": {
+              "справочник_структура_ТМ_has_блок": {
                 "Binding": {
-                  "ConceptualEntity": "data Справочник структура ТМ"
+                  "ConceptualEntity": "Справочник структура ТМ"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_справочник_структура_ТМ": {
+                  "справочник_структура_ТМ": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ"
+                      "Entity": "справочник_структура_ТМ"
                     }
                   },
-                  "data_справочник_структура_ТМ.блок": {
+                  "справочник_структура_ТМ.блок": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ.блок"
+                      "Entity": "справочник_структура_ТМ.блок"
                     }
                   }
                 },
@@ -2680,10 +2670,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_справочник_структура_ТМ"
+                        "Role": "справочник_структура_ТМ"
                       },
                       "Object": {
-                        "Role": "data_справочник_структура_ТМ.блок"
+                        "Role": "справочник_структура_ТМ.блок"
                       }
                     },
                     "State": "Generated",
@@ -2691,20 +2681,20 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ_has_установка": {
+              "справочник_структура_ТМ_has_установка": {
                 "Binding": {
-                  "ConceptualEntity": "data Справочник структура ТМ"
+                  "ConceptualEntity": "Справочник структура ТМ"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_справочник_структура_ТМ": {
+                  "справочник_структура_ТМ": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ"
+                      "Entity": "справочник_структура_ТМ"
                     }
                   },
-                  "data_справочник_структура_ТМ.установка": {
+                  "справочник_структура_ТМ.установка": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ.установка"
+                      "Entity": "справочник_структура_ТМ.установка"
                     }
                   }
                 },
@@ -2712,10 +2702,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_справочник_структура_ТМ"
+                        "Role": "справочник_структура_ТМ"
                       },
                       "Object": {
-                        "Role": "data_справочник_структура_ТМ.установка"
+                        "Role": "справочник_структура_ТМ.установка"
                       }
                     },
                     "State": "Generated",
@@ -2723,20 +2713,20 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ_has_производство": {
+              "справочник_структура_ТМ_has_производство": {
                 "Binding": {
-                  "ConceptualEntity": "data Справочник структура ТМ"
+                  "ConceptualEntity": "Справочник структура ТМ"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_справочник_структура_ТМ": {
+                  "справочник_структура_ТМ": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ"
+                      "Entity": "справочник_структура_ТМ"
                     }
                   },
-                  "data_справочник_структура_ТМ.производство": {
+                  "справочник_структура_ТМ.производство": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ.производство"
+                      "Entity": "справочник_структура_ТМ.производство"
                     }
                   }
                 },
@@ -2744,10 +2734,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_справочник_структура_ТМ"
+                        "Role": "справочник_структура_ТМ"
                       },
                       "Object": {
-                        "Role": "data_справочник_структура_ТМ.производство"
+                        "Role": "справочник_структура_ТМ.производство"
                       }
                     },
                     "State": "Generated",
@@ -2755,20 +2745,20 @@
                   }
                 ]
               },
-              "data_справочник_структура_ТМ_has_завод": {
+              "справочник_структура_ТМ_has_завод": {
                 "Binding": {
-                  "ConceptualEntity": "data Справочник структура ТМ"
+                  "ConceptualEntity": "Справочник структура ТМ"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_справочник_структура_ТМ": {
+                  "справочник_структура_ТМ": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ"
+                      "Entity": "справочник_структура_ТМ"
                     }
                   },
-                  "data_справочник_структура_ТМ.завод": {
+                  "справочник_структура_ТМ.завод": {
                     "Target": {
-                      "Entity": "data_справочник_структура_ТМ.завод"
+                      "Entity": "справочник_структура_ТМ.завод"
                     }
                   }
                 },
@@ -2776,10 +2766,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_справочник_структура_ТМ"
+                        "Role": "справочник_структура_ТМ"
                       },
                       "Object": {
-                        "Role": "data_справочник_структура_ТМ.завод"
+                        "Role": "справочник_структура_ТМ.завод"
                       }
                     },
                     "State": "Generated",
@@ -2787,20 +2777,20 @@
                   }
                 ]
               },
-              "data_сумма_заказа_has_вариант_ФинансГода": {
+              "сумма_заказа_has_вариант_ФинансГода": {
                 "Binding": {
-                  "ConceptualEntity": "data Сумма заказа"
+                  "ConceptualEntity": "Сумма заказа"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_сумма_заказа": {
+                  "сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа"
+                      "Entity": "сумма_заказа"
                     }
                   },
-                  "data_сумма_заказа.вариант_ФинансГода": {
+                  "сумма_заказа.вариант_ФинансГода": {
                     "Target": {
-                      "Entity": "data_сумма_заказа.вариант_ФинансГода"
+                      "Entity": "сумма_заказа.вариант_ФинансГода"
                     }
                   }
                 },
@@ -2808,10 +2798,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       },
                       "Object": {
-                        "Role": "data_сумма_заказа.вариант_ФинансГода"
+                        "Role": "сумма_заказа.вариант_ФинансГода"
                       }
                     },
                     "State": "Generated",
@@ -2819,20 +2809,20 @@
                   }
                 ]
               },
-              "data_сумма_заказа_has_ФГ_период": {
+              "сумма_заказа_has_ФГ_период": {
                 "Binding": {
-                  "ConceptualEntity": "data Сумма заказа"
+                  "ConceptualEntity": "Сумма заказа"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_сумма_заказа": {
+                  "сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа"
+                      "Entity": "сумма_заказа"
                     }
                   },
-                  "data_сумма_заказа.ФГ_период": {
+                  "сумма_заказа.ФГ_период": {
                     "Target": {
-                      "Entity": "data_сумма_заказа.ФГ_период"
+                      "Entity": "сумма_заказа.ФГ_период"
                     }
                   }
                 },
@@ -2840,10 +2830,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       },
                       "Object": {
-                        "Role": "data_сумма_заказа.ФГ_период"
+                        "Role": "сумма_заказа.ФГ_период"
                       }
                     },
                     "State": "Generated",
@@ -2851,20 +2841,20 @@
                   }
                 ]
               },
-              "data_сумма_заказа_has_тип_значения": {
+              "сумма_заказа_has_тип_значения": {
                 "Binding": {
-                  "ConceptualEntity": "data Сумма заказа"
+                  "ConceptualEntity": "Сумма заказа"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_сумма_заказа": {
+                  "сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа"
+                      "Entity": "сумма_заказа"
                     }
                   },
-                  "data_сумма_заказа.тип_значения": {
+                  "сумма_заказа.тип_значения": {
                     "Target": {
-                      "Entity": "data_сумма_заказа.тип_значения"
+                      "Entity": "сумма_заказа.тип_значения"
                     }
                   }
                 },
@@ -2872,10 +2862,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       },
                       "Object": {
-                        "Role": "data_сумма_заказа.тип_значения"
+                        "Role": "сумма_заказа.тип_значения"
                       }
                     },
                     "State": "Generated",
@@ -2883,20 +2873,20 @@
                   }
                 ]
               },
-              "data_сумма_заказа_has_сумма_заказа": {
+              "сумма_заказа_has_сумма_заказа": {
                 "Binding": {
-                  "ConceptualEntity": "data Сумма заказа"
+                  "ConceptualEntity": "Сумма заказа"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_сумма_заказа": {
+                  "сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа"
+                      "Entity": "сумма_заказа"
                     }
                   },
-                  "data_сумма_заказа.сумма_заказа": {
+                  "сумма_заказа.сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа.сумма_заказа"
+                      "Entity": "сумма_заказа.сумма_заказа"
                     }
                   }
                 },
@@ -2904,10 +2894,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       },
                       "Object": {
-                        "Role": "data_сумма_заказа.сумма_заказа"
+                        "Role": "сумма_заказа.сумма_заказа"
                       }
                     },
                     "State": "Generated",
@@ -2915,20 +2905,20 @@
                   }
                 ]
               },
-              "data_сумма_заказа_has_тип_валюты": {
+              "сумма_заказа_has_тип_валюты": {
                 "Binding": {
-                  "ConceptualEntity": "data Сумма заказа"
+                  "ConceptualEntity": "Сумма заказа"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_сумма_заказа": {
+                  "сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа"
+                      "Entity": "сумма_заказа"
                     }
                   },
-                  "data_сумма_заказа.тип_валюты": {
+                  "сумма_заказа.тип_валюты": {
                     "Target": {
-                      "Entity": "data_сумма_заказа.тип_валюты"
+                      "Entity": "сумма_заказа.тип_валюты"
                     }
                   }
                 },
@@ -2936,10 +2926,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       },
                       "Object": {
-                        "Role": "data_сумма_заказа.тип_валюты"
+                        "Role": "сумма_заказа.тип_валюты"
                       }
                     },
                     "State": "Generated",
@@ -2947,20 +2937,20 @@
                   }
                 ]
               },
-              "data_сумма_заказа_has_plan_1": {
+              "сумма_заказа_has_plan_1": {
                 "Binding": {
-                  "ConceptualEntity": "data Сумма заказа"
+                  "ConceptualEntity": "Сумма заказа"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_сумма_заказа": {
+                  "сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа"
+                      "Entity": "сумма_заказа"
                     }
                   },
-                  "data_сумма_заказа.plan_1": {
+                  "сумма_заказа.plan_1": {
                     "Target": {
-                      "Entity": "data_сумма_заказа.plan_1"
+                      "Entity": "сумма_заказа.plan_1"
                     }
                   }
                 },
@@ -2968,10 +2958,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       },
                       "Object": {
-                        "Role": "data_сумма_заказа.plan_1"
+                        "Role": "сумма_заказа.plan_1"
                       }
                     },
                     "State": "Generated",
@@ -2979,20 +2969,20 @@
                   }
                 ]
               },
-              "data_сумма_заказа_has_f": {
+              "сумма_заказа_has_f": {
                 "Binding": {
-                  "ConceptualEntity": "data Сумма заказа"
+                  "ConceptualEntity": "Сумма заказа"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_сумма_заказа": {
+                  "сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа"
+                      "Entity": "сумма_заказа"
                     }
                   },
-                  "data_сумма_заказа.f": {
+                  "сумма_заказа.f": {
                     "Target": {
-                      "Entity": "data_сумма_заказа.f"
+                      "Entity": "сумма_заказа.f"
                     }
                   }
                 },
@@ -3000,10 +2990,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       },
                       "Object": {
-                        "Role": "data_сумма_заказа.f"
+                        "Role": "сумма_заказа.f"
                       }
                     },
                     "State": "Generated",
@@ -3075,15 +3065,15 @@
                   }
                 ]
               },
-              "data_сумма_заказа_has_measure_ратио_план___факт": {
+              "сумма_заказа_has_measure_ратио_план___факт": {
                 "Binding": {
-                  "ConceptualEntity": "data Сумма заказа"
+                  "ConceptualEntity": "Сумма заказа"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_сумма_заказа": {
+                  "сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа"
+                      "Entity": "сумма_заказа"
                     }
                   },
                   "measure.ратио_план___факт": {
@@ -3096,7 +3086,7 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       },
                       "Object": {
                         "Role": "measure.ратио_план___факт"
@@ -3139,15 +3129,15 @@
                   }
                 ]
               },
-              "data_сумма_заказа_has_measure_общие_затраты_план": {
+              "сумма_заказа_has_measure_общие_затраты_план": {
                 "Binding": {
-                  "ConceptualEntity": "data Сумма заказа"
+                  "ConceptualEntity": "Сумма заказа"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_сумма_заказа": {
+                  "сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа"
+                      "Entity": "сумма_заказа"
                     }
                   },
                   "measure.общие_затраты_план": {
@@ -3160,7 +3150,7 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       },
                       "Object": {
                         "Role": "measure.общие_затраты_план"
@@ -3171,15 +3161,15 @@
                   }
                 ]
               },
-              "data_сумма_заказа_has_measure_общие_затраты_факт": {
+              "сумма_заказа_has_measure_общие_затраты_факт": {
                 "Binding": {
-                  "ConceptualEntity": "data Сумма заказа"
+                  "ConceptualEntity": "Сумма заказа"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_сумма_заказа": {
+                  "сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа"
+                      "Entity": "сумма_заказа"
                     }
                   },
                   "measure.общие_затраты_факт": {
@@ -3192,7 +3182,7 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       },
                       "Object": {
                         "Role": "measure.общие_затраты_факт"
@@ -3235,20 +3225,20 @@
                   }
                 ]
               },
-              "data_сумма_заказа_has_data_заказ": {
+              "сумма_заказа_has_заказ": {
                 "Binding": {
-                  "ConceptualEntity": "data Сумма заказа"
+                  "ConceptualEntity": "Сумма заказа"
                 },
                 "State": "Generated",
                 "Roles": {
-                  "data_сумма_заказа": {
+                  "сумма_заказа": {
                     "Target": {
-                      "Entity": "data_сумма_заказа"
+                      "Entity": "сумма_заказа"
                     }
                   },
-                  "data_заказ": {
+                  "заказ": {
                     "Target": {
-                      "Entity": "data_заказ"
+                      "Entity": "заказ"
                     }
                   }
                 },
@@ -3256,10 +3246,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       },
                       "Object": {
-                        "Role": "data_заказ"
+                        "Role": "заказ"
                       }
                     },
                     "State": "Generated",
@@ -3268,10 +3258,10 @@
                   {
                     "Attribute": {
                       "Subject": {
-                        "Role": "data_заказ"
+                        "Role": "заказ"
                       },
                       "Object": {
-                        "Role": "data_сумма_заказа"
+                        "Role": "сумма_заказа"
                       }
                     },
                     "State": "Generated",
@@ -3288,7 +3278,7 @@
     "annotations": [
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"data Заказ\",\"data Справочник структура ТМ\",\"data Сумма заказа\",\"data Единица оборудования\",\"Measure\"]"
+        "value": "[\"Заказ\",\"Справочник структура ТМ\",\"Сумма заказа\",\"Единица оборудования\",\"Measure\"]"
       },
       {
         "name": "__PBI_TimeIntelligenceEnabled",
