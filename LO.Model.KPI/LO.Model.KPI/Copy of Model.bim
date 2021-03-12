@@ -10,7 +10,7 @@
     "dataSources": [
       {
         "type": "structured",
-        "name": "LO.DataMart.KPI",
+        "name": "SQL/192 168 0 115,1436;LO DataMart KPI",
         "connectionDetails": {
           "protocol": "tds",
           "address": {
@@ -596,7 +596,7 @@
               "expression": [
                 "let",
                 " ",
-                "    LO.DataMart.KPI =  #\"LO.DataMart.KPI\",",
+                "    LO.DataMart.KPI =  #\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
                 "    #\"Справочник структура ТМ\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Справочник структура ТМ\"]}[Data],",
                 "    #\"Строки с примененным фильтром\" = ",
                 "        Table.SelectRows(#\"Справочник структура ТМ\", each ",
@@ -858,7 +858,7 @@
               "type": "m",
               "expression": [
                 "let",
-                "    LO.DataMart.KPI = #\"LO.DataMart.KPI\",",
+                "    LO.DataMart.KPI = #\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
                 "    #\"Сумма заказа\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Сумма заказа\"]}[Data]",
                 "in",
                 "    #\"Сумма заказа\""
@@ -1314,7 +1314,7 @@
               "expression": [
                 "let",
                 "  ",
-                "    LO.DataMart.KPI =#\"LO.DataMart.KPI\",",
+                "    LO.DataMart.KPI =#\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
                 "    Заказ = LO.DataMart.KPI{[Schema=\"data\",Item=\"Заказ\"]}[Data]",
                 "in",
                 "    Заказ"
@@ -1686,7 +1686,7 @@
               "expression": [
                 "let",
                 " ",
-                "    LO.DataMart.KPI =#\"LO.DataMart.KPI\",",
+                "    LO.DataMart.KPI =#\"SQL/192 168 0 115,1436;LO DataMart KPI\",",
                 "    #\"Единица оборудования\" = LO.DataMart.KPI{[Schema=\"data\",Item=\"Единица оборудования\"]}[Data]",
                 "in",
                 "    #\"Единица оборудования\""
@@ -1732,45 +1732,1547 @@
       {
         "name": "ru-RU",
         "linguisticMetadata": {
-          "content": "{\n  \"Version\": \"2.0.0\",\n  \"Language\": \"en-US\",\n  \"DynamicImprovement\": \"HighConfidence\",\n  \"Entities\": {\n    \"справочник_структура_ТМ\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Справочник структура ТМ\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"справочник структура ТМ\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"information справочник структура тм\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.617\n          }\n        },\n        {\n          \"fact справочник структура тм\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.617\n          }\n        },\n        {\n          \"info справочник структура тм\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.617\n          }\n        },\n        {\n          \"statistic справочник структура тм\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.617\n          }\n        },\n        {\n          \"document справочник структура тм\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.599\n          }\n        },\n        {\n          \"figure справочник структура тм\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.599\n          }\n        },\n        {\n          \"record справочник структура тм\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.599\n          }\n        }\n      ]\n    },\n    \"справочник_структура_ТМ.действительно_ПО\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Справочник структура ТМ\",\n          \"ConceptualProperty\": \"Действительно ПО\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"действительно ПО\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"date\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.7\n          }\n        }\n      ],\n      \"SemanticType\": \"Time\"\n    },\n    \"справочник_структура_ТМ.действительно_с\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Справочник структура ТМ\",\n          \"ConceptualProperty\": \"Действительно С\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"действительно с\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"date\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.7\n          }\n        }\n      ],\n      \"SemanticType\": \"Time\"\n    },\n    \"справочник_структура_ТМ.дата_изменения\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Справочник структура ТМ\",\n          \"ConceptualProperty\": \"Дата изменения\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"дата изменения\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"date\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.7\n          }\n        }\n      ],\n      \"SemanticType\": \"Time\"\n    },\n    \"справочник_структура_ТМ.класс_ЕО\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Справочник структура ТМ\",\n          \"ConceptualProperty\": \"Класс ЕО\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"класс ЕО\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"справочник_структура_ТМ.техническое_место\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Справочник структура ТМ\",\n          \"ConceptualProperty\": \"Техническое Место\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"техническое место\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"справочник_структура_ТМ.блок\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Справочник структура ТМ\",\n          \"ConceptualProperty\": \"Блок\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"блок\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"справочник_структура_ТМ.установка\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Справочник структура ТМ\",\n          \"ConceptualProperty\": \"Установка\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"установка\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"Название установки\": {\n            \"State\": \"Suggested\",\n            \"Source\": {\n              \"Type\": \"External\",\n              \"Agent\": \"PowerBI.VisualColumnRename\"\n            },\n            \"Weight\": 0.9\n          }\n        }\n      ]\n    },\n    \"справочник_структура_ТМ.производство\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Справочник структура ТМ\",\n          \"ConceptualProperty\": \"Производство\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"производство\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"справочник_структура_ТМ.завод\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Справочник структура ТМ\",\n          \"ConceptualProperty\": \"Завод\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"завод\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"сумма_заказа\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Сумма заказа\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"сумма заказа\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"information сумма заказа\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.609\n          }\n        },\n        {\n          \"fact сумма заказа\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.609\n          }\n        },\n        {\n          \"info сумма заказа\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.609\n          }\n        },\n        {\n          \"statistic сумма заказа\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.609\n          }\n        },\n        {\n          \"document сумма заказа\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.591\n          }\n        },\n        {\n          \"figure сумма заказа\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.591\n          }\n        },\n        {\n          \"record сумма заказа\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.591\n          }\n        }\n      ]\n    },\n    \"сумма_заказа.вариант_ФинансГода\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Сумма заказа\",\n          \"ConceptualProperty\": \"Вариант ФинансГода\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"вариант ФинансГода\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"сумма_заказа.ФГ_период\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Сумма заказа\",\n          \"ConceptualProperty\": \"ФГ/период\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"ФГ/период\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"ФГ\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.97\n          }\n        },\n        {\n          \"ФГ период\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.97\n          }\n        },\n        {\n          \"период\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.97\n          }\n        }\n      ]\n    },\n    \"сумма_заказа.заказ\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Сумма заказа\",\n          \"ConceptualProperty\": \"Заказ\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Hidden\": true,\n      \"Terms\": [\n        {\n          \"заказ\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"сумма_заказа.тип_значения\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Сумма заказа\",\n          \"ConceptualProperty\": \"Тип значения\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"тип значения\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"сумма_заказа.сумма_заказа\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Сумма заказа\",\n          \"ConceptualProperty\": \"Сумма заказа\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"сумма заказа\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"сумма_заказа.тип_валюты\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Сумма заказа\",\n          \"ConceptualProperty\": \"Тип валюты\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"тип валюты\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"calendar\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Calendar\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"calendar\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"almanac\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.491\n          }\n        },\n        {\n          \"datebook\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.491\n          }\n        },\n        {\n          \"agenda\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.491\n          }\n        },\n        {\n          \"logbook\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.491\n          }\n        },\n        {\n          \"diary\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.491\n          }\n        },\n        {\n          \"schedule\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.476\n          }\n        },\n        {\n          \"timetable\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.476\n          }\n        }\n      ]\n    },\n    \"calendar.date\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Calendar\",\n          \"ConceptualProperty\": \"Date\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"date\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"moment\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.736\n          }\n        },\n        {\n          \"period\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.714\n          }\n        }\n      ],\n      \"SemanticType\": \"Time\"\n    },\n    \"measure\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Measure\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"measure\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"degree\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.491\n          }\n        },\n        {\n          \"quota\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.491\n          }\n        },\n        {\n          \"extent\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.491\n          }\n        },\n        {\n          \"portion\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.476\n          }\n        },\n        {\n          \"ration\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.476\n          }\n        },\n        {\n          \"size\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.476\n          }\n        }\n      ]\n    },\n    \"measure.столбец_1\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Measure\",\n          \"ConceptualProperty\": \"Столбец1\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Hidden\": true,\n      \"Terms\": [\n        {\n          \"столбец 1\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"Столбец1\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Generated\",\n            \"Weight\": 0.99\n          }\n        }\n      ]\n    },\n    \"measure.ратио_план___факт\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Measure\",\n          \"ConceptualProperty\": \"Ратио План / Факт\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"ратио план / факт\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"ратио план\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.97\n          }\n        },\n        {\n          \"ратио план факт\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.97\n          }\n        },\n        {\n          \"факт\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.97\n          }\n        }\n      ]\n    },\n    \"measure.общие_затраты_план\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Measure\",\n          \"ConceptualProperty\": \"Общие затраты План\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"общие затраты план\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"measure.общие_затраты_факт\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Measure\",\n          \"ConceptualProperty\": \"Общие затраты Факт\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"общие затраты факт\": {\n            \"State\": \"Generated\"\n          }\n        }\n      ]\n    },\n    \"measure.ратио_план___факт_100\": {\n      \"Definition\": {\n        \"Binding\": {\n          \"ConceptualEntity\": \"Measure\",\n          \"ConceptualProperty\": \"Ратио План / Факт -100%\"\n        }\n      },\n      \"State\": \"Generated\",\n      \"Terms\": [\n        {\n          \"ратио план / факт -100%\": {\n            \"State\": \"Generated\"\n          }\n        },\n        {\n          \"ратио план\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.97\n          }\n        },\n        {\n          \"ратио план факт - 100 %\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.97\n          }\n        },\n        {\n          \"факт -100%\": {\n            \"State\": \"Generated\",\n            \"Weight\": 0.97\n          }\n        },\n        {\n          \"факт -100 percentage\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.771\n          }\n        },\n        {\n          \"факт -100 pct\": {\n            \"Type\": \"Noun\",\n            \"State\": \"Suggested\",\n            \"Weight\": 0.748\n          }\n        },\n        {\n          \"Превышение плана\": {\n            \"State\": \"Suggested\",\n            \"Source\": {\n              \"Type\": \"External\",\n              \"Agent\": \"PowerBI.VisualColumnRename\"\n            },\n            \"Weight\": 0.9\n          }\n        }\n      ]\n    }\n  },\n  \"Relationships\": {\n    \"справочник_структура_ТМ_has_еденица_оборудования\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Справочник структура ТМ\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"справочник_структура_ТМ\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ\"\n          }\n        },\n        \"справочник_структура_ТМ.еденица_оборудования\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ.еденица_оборудования\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"справочник_структура_ТМ\"\n            },\n            \"Object\": {\n              \"Role\": \"справочник_структура_ТМ.еденица_оборудования\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"справочник_структура_ТМ_has_действительно_ПО\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Справочник структура ТМ\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"справочник_структура_ТМ\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ\"\n          }\n        },\n        \"справочник_структура_ТМ.действительно_ПО\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ.действительно_ПО\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"справочник_структура_ТМ\"\n            },\n            \"Object\": {\n              \"Role\": \"справочник_структура_ТМ.действительно_ПО\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"справочник_структура_ТМ_has_действительно_с\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Справочник структура ТМ\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"справочник_структура_ТМ\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ\"\n          }\n        },\n        \"справочник_структура_ТМ.действительно_с\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ.действительно_с\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"справочник_структура_ТМ\"\n            },\n            \"Object\": {\n              \"Role\": \"справочник_структура_ТМ.действительно_с\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"справочник_структура_ТМ_has_дата_изменения\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Справочник структура ТМ\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"справочник_структура_ТМ\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ\"\n          }\n        },\n        \"справочник_структура_ТМ.дата_изменения\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ.дата_изменения\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"справочник_структура_ТМ\"\n            },\n            \"Object\": {\n              \"Role\": \"справочник_структура_ТМ.дата_изменения\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"справочник_структура_ТМ_has_класс_ЕО\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Справочник структура ТМ\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"справочник_структура_ТМ\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ\"\n          }\n        },\n        \"справочник_структура_ТМ.класс_ЕО\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ.класс_ЕО\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"справочник_структура_ТМ\"\n            },\n            \"Object\": {\n              \"Role\": \"справочник_структура_ТМ.класс_ЕО\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"справочник_структура_ТМ_has_техническое_место\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Справочник структура ТМ\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"справочник_структура_ТМ\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ\"\n          }\n        },\n        \"справочник_структура_ТМ.техническое_место\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ.техническое_место\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"справочник_структура_ТМ\"\n            },\n            \"Object\": {\n              \"Role\": \"справочник_структура_ТМ.техническое_место\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"справочник_структура_ТМ_has_блок\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Справочник структура ТМ\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"справочник_структура_ТМ\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ\"\n          }\n        },\n        \"справочник_структура_ТМ.блок\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ.блок\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"справочник_структура_ТМ\"\n            },\n            \"Object\": {\n              \"Role\": \"справочник_структура_ТМ.блок\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"справочник_структура_ТМ_has_установка\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Справочник структура ТМ\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"справочник_структура_ТМ\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ\"\n          }\n        },\n        \"справочник_структура_ТМ.установка\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ.установка\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"справочник_структура_ТМ\"\n            },\n            \"Object\": {\n              \"Role\": \"справочник_структура_ТМ.установка\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"справочник_структура_ТМ_has_производство\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Справочник структура ТМ\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"справочник_структура_ТМ\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ\"\n          }\n        },\n        \"справочник_структура_ТМ.производство\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ.производство\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"справочник_структура_ТМ\"\n            },\n            \"Object\": {\n              \"Role\": \"справочник_структура_ТМ.производство\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"справочник_структура_ТМ_has_завод\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Справочник структура ТМ\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"справочник_структура_ТМ\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ\"\n          }\n        },\n        \"справочник_структура_ТМ.завод\": {\n          \"Target\": {\n            \"Entity\": \"справочник_структура_ТМ.завод\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"справочник_структура_ТМ\"\n            },\n            \"Object\": {\n              \"Role\": \"справочник_структура_ТМ.завод\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"сумма_заказа_has_вариант_ФинансГода\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Сумма заказа\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа\"\n          }\n        },\n        \"сумма_заказа.вариант_ФинансГода\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа.вариант_ФинансГода\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"сумма_заказа\"\n            },\n            \"Object\": {\n              \"Role\": \"сумма_заказа.вариант_ФинансГода\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"сумма_заказа_has_ФГ_период\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Сумма заказа\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа\"\n          }\n        },\n        \"сумма_заказа.ФГ_период\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа.ФГ_период\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"сумма_заказа\"\n            },\n            \"Object\": {\n              \"Role\": \"сумма_заказа.ФГ_период\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"сумма_заказа_has_тип_значения\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Сумма заказа\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа\"\n          }\n        },\n        \"сумма_заказа.тип_значения\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа.тип_значения\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"сумма_заказа\"\n            },\n            \"Object\": {\n              \"Role\": \"сумма_заказа.тип_значения\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"сумма_заказа_has_сумма_заказа\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Сумма заказа\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа\"\n          }\n        },\n        \"сумма_заказа.сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа.сумма_заказа\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"сумма_заказа\"\n            },\n            \"Object\": {\n              \"Role\": \"сумма_заказа.сумма_заказа\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"сумма_заказа_has_тип_валюты\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Сумма заказа\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа\"\n          }\n        },\n        \"сумма_заказа.тип_валюты\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа.тип_валюты\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"сумма_заказа\"\n            },\n            \"Object\": {\n              \"Role\": \"сумма_заказа.тип_валюты\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"сумма_заказа_has_plan_1\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Сумма заказа\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа\"\n          }\n        },\n        \"сумма_заказа.plan_1\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа.plan_1\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"сумма_заказа\"\n            },\n            \"Object\": {\n              \"Role\": \"сумма_заказа.plan_1\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"сумма_заказа_has_f\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Сумма заказа\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа\"\n          }\n        },\n        \"сумма_заказа.f\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа.f\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"сумма_заказа\"\n            },\n            \"Object\": {\n              \"Role\": \"сумма_заказа.f\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"calendar_has_date\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Calendar\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"calendar\": {\n          \"Target\": {\n            \"Entity\": \"calendar\"\n          }\n        },\n        \"calendar.date\": {\n          \"Target\": {\n            \"Entity\": \"calendar.date\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"calendar\"\n            },\n            \"Object\": {\n              \"Role\": \"calendar.date\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"measure_has_plan\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Measure\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"measure\": {\n          \"Target\": {\n            \"Entity\": \"measure\"\n          }\n        },\n        \"measure.plan\": {\n          \"Target\": {\n            \"Entity\": \"measure.plan\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"measure\"\n            },\n            \"Object\": {\n              \"Role\": \"measure.plan\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"сумма_заказа_has_measure_ратио_план___факт\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Сумма заказа\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа\"\n          }\n        },\n        \"measure.ратио_план___факт\": {\n          \"Target\": {\n            \"Entity\": \"measure.ратио_план___факт\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"сумма_заказа\"\n            },\n            \"Object\": {\n              \"Role\": \"measure.ратио_план___факт\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"measure_has_fact\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Measure\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"measure\": {\n          \"Target\": {\n            \"Entity\": \"measure\"\n          }\n        },\n        \"measure.fact\": {\n          \"Target\": {\n            \"Entity\": \"measure.fact\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"measure\"\n            },\n            \"Object\": {\n              \"Role\": \"measure.fact\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"сумма_заказа_has_measure_общие_затраты_план\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Сумма заказа\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа\"\n          }\n        },\n        \"measure.общие_затраты_план\": {\n          \"Target\": {\n            \"Entity\": \"measure.общие_затраты_план\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"сумма_заказа\"\n            },\n            \"Object\": {\n              \"Role\": \"measure.общие_затраты_план\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"сумма_заказа_has_measure_общие_затраты_факт\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Сумма заказа\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа\"\n          }\n        },\n        \"measure.общие_затраты_факт\": {\n          \"Target\": {\n            \"Entity\": \"measure.общие_затраты_факт\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"сумма_заказа\"\n            },\n            \"Object\": {\n              \"Role\": \"measure.общие_затраты_факт\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"measure_has_ратио_план___факт_100\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Measure\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"measure\": {\n          \"Target\": {\n            \"Entity\": \"measure\"\n          }\n        },\n        \"measure.ратио_план___факт_100\": {\n          \"Target\": {\n            \"Entity\": \"measure.ратио_план___факт_100\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"measure\"\n            },\n            \"Object\": {\n              \"Role\": \"measure.ратио_план___факт_100\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    },\n    \"сумма_заказа_has_заказ\": {\n      \"Binding\": {\n        \"ConceptualEntity\": \"Сумма заказа\"\n      },\n      \"State\": \"Generated\",\n      \"Roles\": {\n        \"сумма_заказа\": {\n          \"Target\": {\n            \"Entity\": \"сумма_заказа\"\n          }\n        },\n        \"заказ\": {\n          \"Target\": {\n            \"Entity\": \"заказ\"\n          }\n        }\n      },\n      \"Phrasings\": [\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"сумма_заказа\"\n            },\n            \"Object\": {\n              \"Role\": \"заказ\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        },\n        {\n          \"Attribute\": {\n            \"Subject\": {\n              \"Role\": \"заказ\"\n            },\n            \"Object\": {\n              \"Role\": \"сумма_заказа\"\n            }\n          },\n          \"State\": \"Generated\",\n          \"Weight\": 0.99\n        }\n      ]\n    }\n  }\n}"
-        }
-      }
-    ],
-    "roles": [
-      {
-        "name": "ReadAll",
-        "modelPermission": "read",
-        "tablePermissions": [
-          {
-            "name": "Календарь",
-            "metadataPermission": "none"
-          },
-          {
-            "name": "Measure",
-            "columnPermissions": [
-              {
-                "name": "Столбец1",
-                "metadataPermission": "none"
+          "content": {
+            "Version": "2.0.0",
+            "Language": "en-US",
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "справочник_структура_ТМ": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Справочник структура ТМ"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "справочник структура ТМ": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "information справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "fact справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "info справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "statistic справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.617
+                    }
+                  },
+                  {
+                    "document справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "figure справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.599
+                    }
+                  },
+                  {
+                    "record справочник структура тм": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.599
+                    }
+                  }
+                ]
+              },
+              "справочник_структура_ТМ.действительно_ПО": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Справочник структура ТМ",
+                    "ConceptualProperty": "Действительно ПО"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "действительно ПО": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "справочник_структура_ТМ.действительно_с": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Справочник структура ТМ",
+                    "ConceptualProperty": "Действительно С"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "действительно с": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "справочник_структура_ТМ.дата_изменения": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Справочник структура ТМ",
+                    "ConceptualProperty": "Дата изменения"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "дата изменения": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "date": {
+                      "State": "Generated",
+                      "Weight": 0.7
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "справочник_структура_ТМ.класс_ЕО": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Справочник структура ТМ",
+                    "ConceptualProperty": "Класс ЕО"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "класс ЕО": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "справочник_структура_ТМ.техническое_место": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Справочник структура ТМ",
+                    "ConceptualProperty": "Техническое Место"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "техническое место": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "справочник_структура_ТМ.блок": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Справочник структура ТМ",
+                    "ConceptualProperty": "Блок"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "блок": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "справочник_структура_ТМ.установка": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Справочник структура ТМ",
+                    "ConceptualProperty": "Установка"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "установка": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Название установки": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "справочник_структура_ТМ.производство": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Справочник структура ТМ",
+                    "ConceptualProperty": "Производство"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "производство": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "справочник_структура_ТМ.завод": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Справочник структура ТМ",
+                    "ConceptualProperty": "Завод"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "завод": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "сумма_заказа": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Сумма заказа"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "сумма заказа": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "information сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "fact сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "info сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "statistic сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.609
+                    }
+                  },
+                  {
+                    "document сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "figure сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.591
+                    }
+                  },
+                  {
+                    "record сумма заказа": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.591
+                    }
+                  }
+                ]
+              },
+              "сумма_заказа.вариант_ФинансГода": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Сумма заказа",
+                    "ConceptualProperty": "Вариант ФинансГода"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "вариант ФинансГода": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "сумма_заказа.ФГ_период": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Сумма заказа",
+                    "ConceptualProperty": "ФГ/период"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ФГ/период": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ФГ": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "ФГ период": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "период": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "сумма_заказа.заказ": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Сумма заказа",
+                    "ConceptualProperty": "Заказ"
+                  }
+                },
+                "State": "Generated",
+                "Hidden": true,
+                "Terms": [
+                  {
+                    "заказ": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "сумма_заказа.тип_значения": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Сумма заказа",
+                    "ConceptualProperty": "Тип значения"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "тип значения": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "сумма_заказа.сумма_заказа": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Сумма заказа",
+                    "ConceptualProperty": "Сумма заказа"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "сумма заказа": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "сумма_заказа.тип_валюты": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Сумма заказа",
+                    "ConceptualProperty": "Тип валюты"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "тип валюты": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "calendar": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calendar"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "calendar": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "almanac": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "datebook": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "agenda": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "logbook": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "diary": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "schedule": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "timetable": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "calendar.date": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calendar",
+                    "ConceptualProperty": "Date"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "date": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "moment": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.736
+                    }
+                  },
+                  {
+                    "period": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.714
+                    }
+                  }
+                ],
+                "SemanticType": "Time"
+              },
+              "measure": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "measure": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "degree": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "quota": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "extent": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.491
+                    }
+                  },
+                  {
+                    "portion": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "ration": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.476
+                    }
+                  },
+                  {
+                    "size": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.476
+                    }
+                  }
+                ]
+              },
+              "measure.столбец_1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure",
+                    "ConceptualProperty": "Столбец1"
+                  }
+                },
+                "State": "Generated",
+                "Hidden": true,
+                "Terms": [
+                  {
+                    "столбец 1": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "Столбец1": {
+                      "Type": "Noun",
+                      "State": "Generated",
+                      "Weight": 0.99
+                    }
+                  }
+                ]
+              },
+              "measure.ратио_план___факт": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure",
+                    "ConceptualProperty": "Ратио План / Факт"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ратио план / факт": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ратио план": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "ратио план факт": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "факт": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  }
+                ]
+              },
+              "measure.общие_затраты_план": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure",
+                    "ConceptualProperty": "Общие затраты План"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "общие затраты план": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "measure.общие_затраты_факт": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure",
+                    "ConceptualProperty": "Общие затраты Факт"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "общие затраты факт": {
+                      "State": "Generated"
+                    }
+                  }
+                ]
+              },
+              "measure.ратио_план___факт_100": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Measure",
+                    "ConceptualProperty": "Ратио План / Факт -100%"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ратио план / факт -100%": {
+                      "State": "Generated"
+                    }
+                  },
+                  {
+                    "ратио план": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "ратио план факт - 100 %": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "факт -100%": {
+                      "State": "Generated",
+                      "Weight": 0.97
+                    }
+                  },
+                  {
+                    "факт -100 percentage": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.771
+                    }
+                  },
+                  {
+                    "факт -100 pct": {
+                      "Type": "Noun",
+                      "State": "Suggested",
+                      "Weight": 0.748
+                    }
+                  },
+                  {
+                    "Превышение плана": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
               }
-            ]
+            },
+            "Relationships": {
+              "справочник_структура_ТМ_has_еденица_оборудования": {
+                "Binding": {
+                  "ConceptualEntity": "Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ"
+                    }
+                  },
+                  "справочник_структура_ТМ.еденица_оборудования": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ.еденица_оборудования"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "справочник_структура_ТМ.еденица_оборудования"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "справочник_структура_ТМ_has_действительно_ПО": {
+                "Binding": {
+                  "ConceptualEntity": "Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ"
+                    }
+                  },
+                  "справочник_структура_ТМ.действительно_ПО": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ.действительно_ПО"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "справочник_структура_ТМ.действительно_ПО"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "справочник_структура_ТМ_has_действительно_с": {
+                "Binding": {
+                  "ConceptualEntity": "Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ"
+                    }
+                  },
+                  "справочник_структура_ТМ.действительно_с": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ.действительно_с"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "справочник_структура_ТМ.действительно_с"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "справочник_структура_ТМ_has_дата_изменения": {
+                "Binding": {
+                  "ConceptualEntity": "Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ"
+                    }
+                  },
+                  "справочник_структура_ТМ.дата_изменения": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ.дата_изменения"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "справочник_структура_ТМ.дата_изменения"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "справочник_структура_ТМ_has_класс_ЕО": {
+                "Binding": {
+                  "ConceptualEntity": "Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ"
+                    }
+                  },
+                  "справочник_структура_ТМ.класс_ЕО": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ.класс_ЕО"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "справочник_структура_ТМ.класс_ЕО"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "справочник_структура_ТМ_has_техническое_место": {
+                "Binding": {
+                  "ConceptualEntity": "Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ"
+                    }
+                  },
+                  "справочник_структура_ТМ.техническое_место": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ.техническое_место"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "справочник_структура_ТМ.техническое_место"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "справочник_структура_ТМ_has_блок": {
+                "Binding": {
+                  "ConceptualEntity": "Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ"
+                    }
+                  },
+                  "справочник_структура_ТМ.блок": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ.блок"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "справочник_структура_ТМ.блок"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "справочник_структура_ТМ_has_установка": {
+                "Binding": {
+                  "ConceptualEntity": "Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ"
+                    }
+                  },
+                  "справочник_структура_ТМ.установка": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ.установка"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "справочник_структура_ТМ.установка"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "справочник_структура_ТМ_has_производство": {
+                "Binding": {
+                  "ConceptualEntity": "Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ"
+                    }
+                  },
+                  "справочник_структура_ТМ.производство": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ.производство"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "справочник_структура_ТМ.производство"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "справочник_структура_ТМ_has_завод": {
+                "Binding": {
+                  "ConceptualEntity": "Справочник структура ТМ"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "справочник_структура_ТМ": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ"
+                    }
+                  },
+                  "справочник_структура_ТМ.завод": {
+                    "Target": {
+                      "Entity": "справочник_структура_ТМ.завод"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "справочник_структура_ТМ"
+                      },
+                      "Object": {
+                        "Role": "справочник_структура_ТМ.завод"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "сумма_заказа_has_вариант_ФинансГода": {
+                "Binding": {
+                  "ConceptualEntity": "Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа"
+                    }
+                  },
+                  "сумма_заказа.вариант_ФинансГода": {
+                    "Target": {
+                      "Entity": "сумма_заказа.вариант_ФинансГода"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "сумма_заказа.вариант_ФинансГода"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "сумма_заказа_has_ФГ_период": {
+                "Binding": {
+                  "ConceptualEntity": "Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа"
+                    }
+                  },
+                  "сумма_заказа.ФГ_период": {
+                    "Target": {
+                      "Entity": "сумма_заказа.ФГ_период"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "сумма_заказа.ФГ_период"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "сумма_заказа_has_тип_значения": {
+                "Binding": {
+                  "ConceptualEntity": "Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа"
+                    }
+                  },
+                  "сумма_заказа.тип_значения": {
+                    "Target": {
+                      "Entity": "сумма_заказа.тип_значения"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "сумма_заказа.тип_значения"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "сумма_заказа_has_сумма_заказа": {
+                "Binding": {
+                  "ConceptualEntity": "Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа"
+                    }
+                  },
+                  "сумма_заказа.сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа.сумма_заказа"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "сумма_заказа.сумма_заказа"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "сумма_заказа_has_тип_валюты": {
+                "Binding": {
+                  "ConceptualEntity": "Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа"
+                    }
+                  },
+                  "сумма_заказа.тип_валюты": {
+                    "Target": {
+                      "Entity": "сумма_заказа.тип_валюты"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "сумма_заказа.тип_валюты"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "сумма_заказа_has_plan_1": {
+                "Binding": {
+                  "ConceptualEntity": "Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа"
+                    }
+                  },
+                  "сумма_заказа.plan_1": {
+                    "Target": {
+                      "Entity": "сумма_заказа.plan_1"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "сумма_заказа.plan_1"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "сумма_заказа_has_f": {
+                "Binding": {
+                  "ConceptualEntity": "Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа"
+                    }
+                  },
+                  "сумма_заказа.f": {
+                    "Target": {
+                      "Entity": "сумма_заказа.f"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "сумма_заказа.f"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "calendar_has_date": {
+                "Binding": {
+                  "ConceptualEntity": "Calendar"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "calendar": {
+                    "Target": {
+                      "Entity": "calendar"
+                    }
+                  },
+                  "calendar.date": {
+                    "Target": {
+                      "Entity": "calendar.date"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "calendar"
+                      },
+                      "Object": {
+                        "Role": "calendar.date"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "measure_has_plan": {
+                "Binding": {
+                  "ConceptualEntity": "Measure"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "measure": {
+                    "Target": {
+                      "Entity": "measure"
+                    }
+                  },
+                  "measure.plan": {
+                    "Target": {
+                      "Entity": "measure.plan"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "measure"
+                      },
+                      "Object": {
+                        "Role": "measure.plan"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "сумма_заказа_has_measure_ратио_план___факт": {
+                "Binding": {
+                  "ConceptualEntity": "Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа"
+                    }
+                  },
+                  "measure.ратио_план___факт": {
+                    "Target": {
+                      "Entity": "measure.ратио_план___факт"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "measure.ратио_план___факт"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "measure_has_fact": {
+                "Binding": {
+                  "ConceptualEntity": "Measure"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "measure": {
+                    "Target": {
+                      "Entity": "measure"
+                    }
+                  },
+                  "measure.fact": {
+                    "Target": {
+                      "Entity": "measure.fact"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "measure"
+                      },
+                      "Object": {
+                        "Role": "measure.fact"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "сумма_заказа_has_measure_общие_затраты_план": {
+                "Binding": {
+                  "ConceptualEntity": "Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа"
+                    }
+                  },
+                  "measure.общие_затраты_план": {
+                    "Target": {
+                      "Entity": "measure.общие_затраты_план"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "measure.общие_затраты_план"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "сумма_заказа_has_measure_общие_затраты_факт": {
+                "Binding": {
+                  "ConceptualEntity": "Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа"
+                    }
+                  },
+                  "measure.общие_затраты_факт": {
+                    "Target": {
+                      "Entity": "measure.общие_затраты_факт"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "measure.общие_затраты_факт"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "measure_has_ратио_план___факт_100": {
+                "Binding": {
+                  "ConceptualEntity": "Measure"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "measure": {
+                    "Target": {
+                      "Entity": "measure"
+                    }
+                  },
+                  "measure.ратио_план___факт_100": {
+                    "Target": {
+                      "Entity": "measure.ратио_план___факт_100"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "measure"
+                      },
+                      "Object": {
+                        "Role": "measure.ратио_план___факт_100"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              },
+              "сумма_заказа_has_заказ": {
+                "Binding": {
+                  "ConceptualEntity": "Сумма заказа"
+                },
+                "State": "Generated",
+                "Roles": {
+                  "сумма_заказа": {
+                    "Target": {
+                      "Entity": "сумма_заказа"
+                    }
+                  },
+                  "заказ": {
+                    "Target": {
+                      "Entity": "заказ"
+                    }
+                  }
+                },
+                "Phrasings": [
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "сумма_заказа"
+                      },
+                      "Object": {
+                        "Role": "заказ"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  },
+                  {
+                    "Attribute": {
+                      "Subject": {
+                        "Role": "заказ"
+                      },
+                      "Object": {
+                        "Role": "сумма_заказа"
+                      }
+                    },
+                    "State": "Generated",
+                    "Weight": 0.99
+                  }
+                ]
+              }
+            }
           },
-          {
-            "name": "Справочник структура ТМ",
-            "metadataPermission": "none"
-          },
-          {
-            "name": "Сумма заказа",
-            "metadataPermission": "none"
-          },
-          {
-            "name": "Заказ",
-            "metadataPermission": "none"
-          },
-          {
-            "name": "Единица оборудования",
-            "metadataPermission": "none"
-          }
-        ]
+          "contentType": "json"
+        }
       }
     ],
     "annotations": [

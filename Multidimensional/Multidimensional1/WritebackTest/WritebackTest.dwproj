@@ -17,6 +17,16 @@
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Other Cube.cube</Name>
+      <FullPath>Other Cube.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Other Cube.partitions</Name>
+          <FullPath>Other Cube.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>
@@ -40,6 +50,16 @@
       <FullPath>KC Writeback Test Source.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
+  <Roles>
+    <ProjectItem>
+      <Name>SimpleUser.role</Name>
+      <FullPath>SimpleUser.role</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AdvansedUser.role</Name>
+      <FullPath>AdvansedUser.role</FullPath>
+    </ProjectItem>
+  </Roles>
   <Configurations>
     <Configuration>
       <Name>Development</Name>

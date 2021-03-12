@@ -44,6 +44,16 @@
       <FullPath>Ilim Data Mart.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
+  <Roles>
+    <ProjectItem>
+      <Name>SimpleUser.role</Name>
+      <FullPath>SimpleUser.role</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AdvansedUser.role</Name>
+      <FullPath>AdvansedUser.role</FullPath>
+    </ProjectItem>
+  </Roles>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
